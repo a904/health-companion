@@ -1,8 +1,4 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth';
-import { Observable } from 'rxjs/Observable';
-import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'login-form',
@@ -11,28 +7,11 @@ import * as firebase from 'firebase/app';
 })
 
 export class LoginForm {
-  user: Observable<firebase.User>;
-  items: FirebaseListObservable<any[]>;
   msgVal: string = '';
 
-  constructor(public afAuth: AngularFireAuth, public af: AngularFireDatabase) {
-    this.items = af.list('/messages', {
-      query: {
-        limitToLast: 50
-      }
-    });
-    this.user = this.afAuth.authState;
+  constructor() {
 
   }
-  login() {
-      this.afAuth.auth.signInAnonymously();
-      this.nextClicked('section-start');
-  }
-
-  logout() {
-      this.afAuth.auth.signOut();
-  }
-
   userDetails = {
     firstName: "",
     lastName: "",

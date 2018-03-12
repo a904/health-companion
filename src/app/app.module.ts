@@ -74,7 +74,6 @@ import { FinishComponent } from './components/finish/finish.component';
 import { RadioButtonComponent } from './components/radio-button/radio-button.component';
 import { MedicalConditionsComponent } from './components/body-section/medical-conditions/medical-conditions.component';
 
-import { AngularFireModule } from 'angularfire2';
 export const firebaseConfig = {
     apiKey: "AIzaSyBjdV5r2_BFAFmH6s8yX9OmRbRNsvDj7yQ",
     authDomain: "fit-assessment-form.firebaseapp.com",
@@ -83,8 +82,6 @@ export const firebaseConfig = {
     storageBucket: "fit-assessment-form.appspot.com",
     messagingSenderId: "313561842328"
   };
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireAuthModule } from 'angularfire2/auth';
 
 
 @NgModule({
@@ -103,10 +100,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule,
-    AngularFireAuthModule
+    HttpModule
   ],
   providers: [ServerService],
   bootstrap: [AppComponent]
