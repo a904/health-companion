@@ -1,0 +1,16 @@
+<p style="margin-top: 20vh;" class="raleway heading">
+  Weekly on an average, I spend about
+</p>
+<h2>
+  <input class= "montsserat"
+  [(ngModel)] = "numberOfHours"
+  type="number"
+  min="1" max="98" step="1">
+  hours
+</h2>
+<p class="raleway heading">
+  on these activities
+</p>
+
+<br>
+<button class="nextButton" type="button" name="button" (click)="nextClicked('get-started')">Next</button>

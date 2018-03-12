@@ -1,0 +1,29 @@
+<p class="montsserat heading">Any Allergies?</p>
+
+<button class="smallButton" type="button" name="button"
+(click)="setHasAllergyValue(true)">
+  Yes
+</button>
+<button (click)="nextClicked('pains')" class="smallButton" type="button" name="button"
+(click)="setHasAllergyValue(false)">
+  No
+</button>
+
+<div *ngIf="hasAllergy" class="addItems">
+  <input class="inputField" type="text"
+        placeholder="mention the Allergies (you can add multiple)"
+        list="suggestions"
+        [(ngModel)]="allergy">
+  <datalist id="suggestions">
+    <option value="Pet Dander"></option>
+    <option value="Pollen"></option>
+    <option value="Bee Venom"></option>
+    <option value="Gluten"></option>
+    <option value="Dust"></option>
+    <option value="Diary"></option>
+  </datalist>
+
+  <button class="smallButton" type="button" name="button" (click)="addAllergy()">Add</button>
+</div>
+
+<button *ngIf="allergies[0]" class="nextButton" type="button" name="button" (click)="nextClicked('pains')">Next</button>

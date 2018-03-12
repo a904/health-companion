@@ -1,0 +1,6 @@
+<p class="montsserat heading">I would weigh(in kgs)?</p>
+<input
+type="range" min = "30" max = "120" step = "1"
+(change)="weightPoundCalculate()" [(ngModel)]="weight">
+<div style="color: #2f83bd;" class="montsserat"><h2 style="margin:0;">{{weight}} kg </h2><br> {{weightPound}} lbs</div>
+<button class="nextButton" type="button" name="button" (click)="nextClicked()">Next</button>

@@ -1,0 +1,56 @@
+<p class="montsserat heading">From overall wellness perspective, I want to</p>
+<p class="raleway">(You can choose multiple)</p>
+
+<div class="container-fluid">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="lookGood">
+    <div [ngClass]="[aspirations.lookGood ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Look Good - actually I want to look stunning!</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "lookGood" type="checkbox" [(ngModel)] = "aspirations.lookGood">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="decreaseFat">
+    <div [ngClass]="[aspirations.decreaseFat ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Decrease Body Fat to cure potential ailments</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "decreaseFat" type="checkbox" [(ngModel)] = "aspirations.decreaseFat">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="reduceStress">
+    <div [ngClass]="[aspirations.reduceStress ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Reduce Stress - blow off a little steam, cut a little slack</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "reduceStress" type="checkbox" [(ngModel)] = "aspirations.reduceStress">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="improvePerformance">
+    <div [ngClass]="[aspirations.improvePerformance ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Improve Overall Performance in Current Fitness Activities For eg. run faster, longer</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "improvePerformance" type="checkbox" [(ngModel)] = "aspirations.improvePerformance">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="improveStrength">
+    <div [ngClass]="[aspirations.improveStrength ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Improve Strength and Power</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "improveStrength" type="checkbox" [(ngModel)] = "aspirations.improveStrength">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="increaseEndurance">
+    <div [ngClass]="[aspirations.increaseEndurance ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Increase Endurance  for eg. I want to be able to do multiple pushups anytime, anywhere</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "increaseEndurance" type="checkbox" [(ngModel)] = "aspirations.increaseEndurance">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="iAmOkay">
+    <div [ngClass]="[aspirations.iAmOkay ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">None, I am okay</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "iAmOkay" type="checkbox" [(ngModel)] = "aspirations.iAmOkay">
+</div>
+
+<button class="nextButton" type="button" name="button" (click)="nextClicked('holding-back')">Next</button>

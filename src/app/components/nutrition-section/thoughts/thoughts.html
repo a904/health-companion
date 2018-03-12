@@ -1,0 +1,34 @@
+<p class="montsserat heading">My thoughts on Nutrition are</p>
+
+<div class="container-fluid">
+
+  <label (click)="nextClicked('junk-food')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="careful">
+    <div [ngClass]="[(thought == 'Careful about eating')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">I am usually careful about what and how much I should I should eat</p>
+    </div>
+  </label>
+  <input id="careful" type="radio" value="Careful about eating" [(ngModel)] = "thought">
+
+
+  <label (click)="nextClicked('junk-food')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="haywireWhenBusy">
+    <div [ngClass]="[(thought == 'haywired when busy/travelling')?'checked':'unchecked']" class="radio-card withoutIcon">
+      <p class="raleway">When I travel or on busy days, my whole eating schedule goes haywire.</p>
+    </div>
+  </label>
+  <input id="haywireWhenBusy" type="radio" value="haywired when busy/travelling" [(ngModel)] = "thought">
+
+  <label (click)="nextClicked('junk-food')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="notRegular">
+    <div [ngClass]="[(thought == 'Irregular and overeats')?'checked':'unchecked']" class="radio-card withoutIcon">
+      <p class="raleway">I do not eat at regular intervals and end up over-eating whenever I get food.</p>
+    </div>
+  </label>
+  <input id="notRegular" type="radio" value="Irregular and overeats" [(ngModel)] = "thought">
+
+  <label (click)="nextClicked('junk-food')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="dontCare">
+    <div [ngClass]="[(thought == 'Dont care')?'checked':'unchecked']" class="radio-card withoutIcon">
+      <p class="raleway">I really don't care, I just eat.</p>
+    </div>
+  </label>
+  <input id="dontCare" type="radio" value="Dont care" [(ngModel)] = "thought">
+
+</div>

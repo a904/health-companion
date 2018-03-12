@@ -1,0 +1,24 @@
+.form-container {
+    padding-top: 20px;
+    height: 100vh;
+    background-color: #40a2e6;
+}
+.form-body {
+  border-radius: 10px;
+    padding-top: 50px;
+    height: auto;
+    background-color: #fff;
+    padding-bottom:50px;
+}
+input {
+  width: 66%;
+}
+button {
+  border-radius: 5px;
+  width: 66%;
+  height: 8vh;
+}
+a {
+  text-decoration: none;
+  color: #40a2e6;
+}

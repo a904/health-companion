@@ -1,0 +1,76 @@
+<p class="montsserat heading">For mental peace and stability,</p>
+
+<div class="container-fluid">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="true">
+    <div [ngClass]="[(meditates.value == 'true')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">I meditate</p>
+    </div>
+  </label>
+  <input id="true"
+  [(ngModel)] = "meditates.value"
+  type="radio" name="meditates" value="true">
+
+  <div *ngIf = "meditates.value == 'true'">
+    <label (click)="nextClicked('next-narrative')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="whenStressed">
+      <div [ngClass]="[(meditates.howOften == '7 hours everyday')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">Depends, Whenever I feel stressed</p>
+      </div>
+    </label>
+    <input id="whenStressed"
+    [(ngModel)] = "meditates.howOften"
+    type="radio" name="doesMeditate" value="When feels stressed">
+
+
+    <label (click)="nextClicked('next-narrative')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="fewTimes">
+      <div [ngClass]="[(meditates.howOften == '2-3 times a week')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">2-3 times a week</p>
+      </div>
+    </label>
+    <input id="fewTimes"
+    [(ngModel)] = "meditates.howOften"
+    type="radio" name="doesMeditate" value="2-3 times a week">
+
+    <label (click)="nextClicked('next-narrative')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="everyDay">
+      <div [ngClass]="[(meditates.howOften == 'Everyday')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">Everyday</p>
+      </div>
+    </label>
+    <input id="everyDay"
+    [(ngModel)] = "meditates.howOften"
+    type="radio" name="doesMeditate" value="Everyday">
+
+  </div>
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="false">
+    <div [ngClass]="[(meditates.value == 'false')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">I do not meditate</p>
+    </div>
+  </label>
+  <input id="false"
+  [(ngModel)] = "meditates.value"
+  type="radio" name="meditates" value="false">
+
+  <div *ngIf="meditates.value == 'false'">
+
+    <label (click)="nextClicked('next-narrative')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="notInterested">
+      <div [ngClass]="[(meditates.aspireToMeditate == 'false')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">Not interested either</p>
+      </div>
+    </label>
+    <input id="notInterested"
+    [(ngModel)] = "meditates.aspireToMeditate"
+    type="radio" name="doesNotMeditate" value="false">
+
+    <label (click)="nextClicked('next-narrative')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="interested">
+      <div [ngClass]="[(meditates.aspireToMeditate == 'true')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">Would like to know more</p>
+      </div>
+    </label>
+    <input id="interested"
+    [(ngModel)] = "meditates.aspireToMeditate"
+    type="radio" name="doesNotMeditate" value="true">
+
+  </div>
+
+</div>

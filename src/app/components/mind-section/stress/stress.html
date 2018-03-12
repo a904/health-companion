@@ -1,0 +1,62 @@
+<fit-narrative>
+   As much as we all love resting, sleeping or having fun, we hate Stress. Stress is bad, it negatively impacts our productivity, health and happiness. We should carefully observe how often, when and where we feel stressed and then eliminate it from our routine.
+</fit-narrative>
+
+<p class="montsserat heading">On a normal day, do you feel stressed?</p>
+
+<div class="container-fluid">
+
+  <label (click)="nextClicked('meditate')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="noStress">
+    <div [ngClass]="[(stressDetails.doesFeelStressed == 'No stress')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">No, I don't feel stressed at all</p>
+    </div>
+  </label>
+  <input id="noStress"
+  [(ngModel)] = "stressDetails.doesFeelStressed"
+  type="radio" name="stress" value="No stress">
+
+
+  <label (click)="nextClicked('meditate')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="notReally">
+    <div [ngClass]="[(stressDetails.doesFeelStressed == 'Not really')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Not really, I might feel stressed for a couple of minutes if I am stuck in a complex situtation</p>
+    </div>
+  </label>
+  <input id="notReally"
+  [(ngModel)] = "stressDetails.doesFeelStressed"
+  type="radio" name="stress" value="Not really">
+
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="stressed">
+    <div [ngClass]="[(stressDetails.doesFeelStressed == 'Generally stressed')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Yes, I generally feel stressed</p>
+    </div>
+  </label>
+  <input id="stressed"
+  [(ngModel)] = "stressDetails.doesFeelStressed"
+  type="radio" name="stress" value="Generally stressed">
+
+</div>
+
+<div *ngIf="stressDetails.doesFeelStressed == 'Generally stressed'" class="">
+  <label (click)="nextClicked('meditate')" for="work">
+    <div [ngClass]="[(stressDetails.stressedWhen == 'While meeting critical deadlines')?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/mind/work.svg" alt="">
+        </div>
+        <p class="radioLabel">While meeting critical deadlines at work</p>
+    </div>
+  </label>
+  <input name="stressedWhen" id = "work" type="radio" value="While meeting critical deadlines" [(ngModel)] = "stressDetails.stressedWhen">
+
+
+  <label (click)="nextClicked('meditate')" for="home">
+    <div [ngClass]="[(stressDetails.stressedWhen == 'While solving issues at home')?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/mind/home.svg" alt="">
+        </div>
+        <p class="radioLabel">While solving complex issues at home</p>
+    </div>
+  </label>
+  <input name="stressedWhen" id = "home" type="radio" value="While solving issues at home" [(ngModel)] = "stressDetails.stressedWhen">
+
+</div>

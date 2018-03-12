@@ -1,0 +1,19 @@
+<div class="form-container">
+    <div class="form-body col-lg-4 col-log-offset-4
+        col-md-4 col-md-offset-4
+        col-sm-6 col-sm-offset-3
+        col-xs-10 col-xs-offset-1">
+        <!-- <div class="logo-with-Name"> <img style="width: 70%; height: auto;" src="assets/icons/textlogo.svg" alt=""></div> <br> -->
+        <h4 class="montsserat">
+          Health Companion
+        </h4>
+
+        <input type="text" name="" placeholder="First Name" [(ngModel)] = "userDetails.firstName">
+        <input type="text" name="" placeholder="Last Name" [(ngModel)] = "userDetails.lastName">
+        <input type="text" name="" placeholder="Email" [(ngModel)] = "userDetails.email">
+
+        <button class="nextButton" [disabled]="!userDetails.email" type="button" name="button" (click) = "login()">Fit Me Up</button>
+        <!-- <a href="#">New? Sign Up Now</a><br><br>
+        <a href="#">Forgot Password</a><br><br> -->
+    </div>
+</div>

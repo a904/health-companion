@@ -1,0 +1,55 @@
+<div id="toggle-test" class="form-container">
+
+      <login-form *ngIf="currentComponent === 'login-form'"
+      (sendUserDetails) = "setSectionValues($event, 'user')"
+      (showNextComponent) = "onNavigate($event)">
+      </login-form>
+
+      <section-start (showNextComponent) = "onNavigate($event)"
+      [name] = "sectionValues.userDetails.firstName"
+      *ngIf="currentComponent === 'section-start'">
+      </section-start>
+
+      <body-section
+      (showNextComponent) = "onNavigate($event)"
+      (bodyValuesEmit) = "setSectionValues($event, 'body')"
+      *ngIf="currentComponent === 'body-section'">
+      </body-section>
+
+      <energy-section
+      (showNextComponent) = "onNavigate($event)"
+      (energyValuesEmit) = "setSectionValues($event, 'energy')"
+      [(forBMR)] = "sectionValues.bodyValues"
+      *ngIf="currentComponent === 'energy-section'">
+      </energy-section>
+
+      <nutrition-section
+      (showNextComponent) = "onNavigate($event)"
+      (nutritionValuesEmit) = "setSectionValues($event, 'nutrition')"
+      *ngIf="currentComponent === 'nutrition-section'">
+      </nutrition-section>
+
+      <mind-section
+      (showNextComponent) = "onNavigate($event)"
+      (mindValuesEmit) = "setSectionValues($event, 'mind')"
+      *ngIf="currentComponent === 'mind-section'">
+      </mind-section>
+
+      <activity-section
+      (showNextComponent) = "onNavigate($event)"
+      (activityValuesEmit) = "setSectionValues($event, 'activity')"
+      *ngIf="currentComponent === 'activity-section'">
+      </activity-section>
+
+      <personality-section
+      (showNextComponent) = "onNavigate($event)"
+      (personalityValuesEmit) = "setSectionValues($event, 'personality')"
+      *ngIf="currentComponent === 'personality-section'">
+      </personality-section>
+
+      <app-finish
+      (sendCommentsValue)="setSectionValues($event, 'comments')"
+      (showNextComponent)="onNavigate($event)"
+      *ngIf="currentComponent === 'finish'">
+      </app-finish>
+</div>

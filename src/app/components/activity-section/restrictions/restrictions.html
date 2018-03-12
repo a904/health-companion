@@ -1,0 +1,10 @@
+<h2>Are there any restrictionsor conditions which restrict you from
+  performing certain exercises or activities?</h2>
+
+<input type="text" placeholder="If yes, let us know by mentioning here" [(ngModel)]="restriction">
+<button type="button" name="button" (click)="addRestriction()">Add</button>
+<button type="button" name="button" (click)="nextClicked()">Next</button>
+
+<button type="button" name="button" (click)="noClicked()">No, I do not have any restrictions.</button>
+
+<h2>Has a restrictions? : {{isRestriction}}</h2>

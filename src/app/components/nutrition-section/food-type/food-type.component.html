@@ -1,0 +1,86 @@
+<p class="montsserat heading">Type of foods you eat regulary</p>
+<p class="raleway">(You can choose multiple)</p>
+
+<div class="container-fluid">
+
+  <label for="lean-proteins">
+    <div [ngClass]="[foodTypes.leanProteins ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/lean-proteins.svg" alt="">
+        </div>
+        <p class="radioLabel">Lean Proteins</p>
+    </div>
+  </label>
+  <input name="foodType" id = "lean-proteins" type="checkbox" [(ngModel)] = "foodTypes.leanProteins">
+
+  <label for="colourful-veggies">
+    <div [ngClass]="[foodTypes.colourfulVeggies ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/colourful-veggies.svg" alt="">
+        </div>
+        <p class="radioLabel">Colourful Veggies</p>
+    </div>
+  </label>
+  <input name="foodType" id = "colourful-veggies" type="checkbox" [(ngModel)] = "foodTypes.colourfulVeggies">
+
+
+  <label for="natural-fats">
+    <div [ngClass]="[foodTypes.naturalFats ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/natural-fats.svg" alt="">
+        </div>
+        <p class="radioLabel">Natural Fats</p>
+    </div>
+  </label>
+  <input name="foodType" id = "natural-fats" type="checkbox" [(ngModel)] = "foodTypes.naturalFats">
+
+
+  <label for="watery-carbs">
+    <div [ngClass]="[foodTypes.wateryCarbs ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/watery-carbs.svg" alt="">
+        </div>
+        <p class="radioLabel">Watery Carbs</p>
+    </div>
+  </label>
+  <input name="foodType" id = "watery-carbs" type="checkbox" [(ngModel)] = "foodTypes.wateryCarbs">
+
+  <label for="juicy-fruits">
+    <div [ngClass]="[foodTypes.juicyFruits ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/juicy-fruits.svg" alt="">
+        </div>
+        <p class="radioLabel">Juicy Fruits</p>
+    </div>
+  </label>
+  <input name="foodType" id = "juicy-fruits" type="checkbox" [(ngModel)] = "foodTypes.juicyFruits">
+
+
+  <label for="dairy-products">
+    <div [ngClass]="[foodTypes.dairyProducts ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/dairy-products.svg" alt="">
+        </div>
+        <p class="radioLabel">Dairy Products</p>
+    </div>
+  </label>
+  <input name="foodType" id = "dairy-products" type="checkbox" [(ngModel)] = "foodTypes.dairyProducts">
+
+  <label for="junk">
+    <div [ngClass]="[foodTypes.junk ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/junk.svg" alt="">
+        </div>
+        <p class="radioLabel">Junk Food</p>
+    </div>
+  </label>
+  <input name="foodType" id = "junk" type="checkbox" [(ngModel)] = "foodTypes.junk">
+
+</div>
+
+<input class="inputField" type="text"
+  placeholder="Other foods" [(ngModel)]="otherFoodType">
+
+<button class="smallButton" type="button" name="button" (click)="addFoodType()">Add</button>
+
+<button class="nextButton" type="button" name="button" (click)="nextClicked('next-narrative')">Next</button>

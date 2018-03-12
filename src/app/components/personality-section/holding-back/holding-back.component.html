@@ -1,0 +1,70 @@
+<p class="montsserat heading">There might be some things holding me back from achieving my wellness goals</p>
+<p class="raleway">(You can choose multiple)</p>
+
+<div class="container-fluid">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="noMotivation">
+    <div [ngClass]="[holdingBack.noMotivation ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">No Motivation - Couch seems more attractive than gym shoes</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "noMotivation" type="checkbox" [(ngModel)] = "holdingBack.noMotivation">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="noTime">
+    <div [ngClass]="[holdingBack.noTime ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">No Time - I only have 24 hours in a day</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "noTime" type="checkbox" [(ngModel)] = "holdingBack.noTime">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="noEquipments">
+    <div [ngClass]="[holdingBack.noEquipments ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">No Equipments - Don't have access to required facilities</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "noEquipments" type="checkbox" [(ngModel)] = "holdingBack.noEquipments">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="whereToStart">
+    <div [ngClass]="[holdingBack.whereToStart ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Don't know where to start - Who can help?</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "whereToStart" type="checkbox" [(ngModel)] = "holdingBack.whereToStart">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="noResults">
+    <div [ngClass]="[holdingBack.noResults ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">I tried but I did not see results</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "noResults" type="checkbox" [(ngModel)] = "holdingBack.noResults">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="shyConcious">
+    <div [ngClass]="[holdingBack.shyConcious ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">I am shy / self - Concious; what if I am not able to do it</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "shyConcious" type="checkbox" [(ngModel)] = "holdingBack.shyConcious">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="noMoney">
+    <div [ngClass]="[holdingBack.noMoney ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">I have no money</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "noMoney" type="checkbox" [(ngModel)] = "holdingBack.noMoney">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="noFriends">
+    <div [ngClass]="[holdingBack.noFriends ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">I have no friends for company</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "noFriends" type="checkbox" [(ngModel)] = "holdingBack.noFriends">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="alRight">
+    <div [ngClass]="[holdingBack.alRight ?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Nah, I guess I am all right!</p>
+    </div>
+  </label>
+  <input name="aspirations" id = "alRight" type="checkbox" [(ngModel)] = "holdingBack.alRight">
+</div>
+
+<button class="nextButton" type="button" name="button" (click)="nextClicked('holding-back')">Next</button>

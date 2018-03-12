@@ -1,0 +1,115 @@
+<p class="montsserat heading">On an average, over a week, I get</p>
+
+<div class="container-fluid">
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="aboveNine">
+    <div [ngClass]="[(sleepDetails.duration == 'More than 9 hours')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">More than 9 hours of sleep per day</p>
+    </div>
+  </label>
+  <input id="aboveNine"
+  [(ngModel)] = "sleepDetails.duration"
+  type="radio" name="duration" value="More than 9 hours">
+
+  <div *ngIf="sleepDetails.duration == 'More than 9 hours'" class="subSection">
+
+    <label (click)="nextClicked('stress')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="sevenEveryday">
+      <div [ngClass]="[(sleepDetails.additionalDetail == 'Minimum 7 hours everyday')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">and everyday I can afford 7 hours minimum</p>
+      </div>
+    </label>
+    <input id="sevenEveryday"
+    [(ngModel)] = "sleepDetails.additionalDetail"
+    type="radio" name="moreThanNine" value="Minimum 7 hours everyday">
+
+    <label (click)="nextClicked('stress')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="lessThanSevenOnce">
+      <div [ngClass]="[(sleepDetails.additionalDetail == 'Once in a week less than 7 hours')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">and maybe once in a week I get to sleep less than 7 hours</p>
+      </div>
+    </label>
+    <input id="lessThanSevenOnce"
+    [(ngModel)] = "sleepDetails.additionalDetail"
+    type="radio" name="moreThanNine" value="Once in a week less than 7 hours">
+
+    <label (click)="nextClicked('stress')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="lessThanSevenSome">
+      <div [ngClass]="[(sleepDetails.additionalDetail == 'Some days of week less than 7 hours')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">and some days in a week I tend to sleep less than 7 hours</p>
+      </div>
+    </label>
+    <input id="lessThanSevenSome"
+    [(ngModel)] = "sleepDetails.additionalDetail"
+    type="radio" name="moreThanNine" value="Some days of week less than 7 hours">
+
+  </div>
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="sevenToNine">
+    <div [ngClass]="[(sleepDetails.duration == '7-9 hours')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Around 7-9 hours of sleep</p>
+    </div>
+  </label>
+  <input id="sevenToNine"
+  [(ngModel)] = "sleepDetails.duration"
+  type="radio" name="duration" value="7-9 hours">
+
+  <div *ngIf="sleepDetails.duration == '7-9 hours'" class="subSection">
+
+    <label (click)="nextClicked('stress')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="sevenEveryday">
+      <div [ngClass]="[(sleepDetails.additionalDetail == '7 hours everyday')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">and everyday I can afford 7 hours minimum</p>
+      </div>
+    </label>
+    <input id="sevenEveryday"
+    [(ngModel)] = "sleepDetails.additionalDetail"
+    type="radio" name="sevenToNine" value="7 hours everyday">
+
+    <label (click)="nextClicked('stress')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="lessThanSevenOnce">
+      <div [ngClass]="[(sleepDetails.additionalDetail == 'Less than 7 hours once a week')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">and maybe once in a week I get to sleep less than 7 hours</p>
+      </div>
+    </label>
+    <input id="lessThanSevenOnce"
+    [(ngModel)] = "sleepDetails.additionalDetail"
+    type="radio" name="sevenToNine" value="Less than 7 hours once a week">
+
+    <label (click)="nextClicked('stress')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="lessThanSevenSome">
+      <div [ngClass]="[(sleepDetails.additionalDetail == 'Less than 7 hours some days in a week')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">and some days in a week I tend to sleep less than 7 hours</p>
+      </div>
+    </label>
+    <input id="lessThanSevenSome"
+    [(ngModel)] = "sleepDetails.additionalDetail"
+    type="radio" name="sevenToNine" value="Less than 7 hours some days in a week">
+
+  </div>
+
+  <label class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="lessThanSeven">
+    <div [ngClass]="[(sleepDetails.duration == 'Less than 7 hours')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Less than 7 hours of sleep</p>
+    </div>
+  </label>
+  <input id="lessThanSeven"
+  [(ngModel)] = "sleepDetails.duration"
+  type="radio" name="duration" value="Less than 7 hours">
+
+  <div *ngIf="sleepDetails.duration == 'Less than 7 hours'" class="subSection">
+
+    <label (click)="nextClicked('stress')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="moreThanSevenOnce">
+      <div [ngClass]="[(sleepDetails.additionalDetail == 'More than 7 hours once a week')?'checked':'unchecked']" class="radio-card withoutIcon">
+          <p class="raleway">And maybe once a week I get to sleep more than 7 hours</p>
+      </div>
+    </label>
+    <input id="moreThanSevenOnce"
+    [(ngModel)] = "sleepDetails.additionalDetail"
+    type="radio" name="lessThanSeven" value="More than 7 hours once a week">
+
+    <label (click)="nextClicked('stress')" class="col-lg-5 col-lg-offset-4 col-md-5 col-md-offset-4 col-sm-8 col-sm-offset-3 col-xs-10 col-xs-offset-2" for="moreThanSevenSome">
+      <div [ngClass]="[(sleepDetails.additionalDetail == 'More than 7 hours few days a week')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">And maybe a few days in a week I get to sleep more than 7 hours</p>
+      </div>
+    </label>
+    <input id="moreThanSevenSome"
+    [(ngModel)] = "sleepDetails.additionalDetail"
+    type="radio" name="lessThanSeven" value="More than 7 hours few days a week">
+
+  </div>
+</div>

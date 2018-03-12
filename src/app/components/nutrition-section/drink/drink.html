@@ -1,0 +1,66 @@
+<p class="montsserat heading">Sometimes, I indulge in alcohol</p>
+
+<div class="container-fluid">
+
+  <label for="yes">
+    <div [ngClass]="[(drinkingDetails.does == 'true')?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/alcohol.svg" alt="">
+        </div>
+        <p class="radioLabel">Yes, I do</p>
+    </div>
+  </label>
+  <input name="drink" id = "yes" type="radio" value="true" [(ngModel)] = "drinkingDetails.does">
+
+  <label (click)="nextClicked('smoking')" for="no">
+    <div [ngClass]="[(drinkingDetails.does == 'false')?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/no-alcohol.svg" alt="">
+        </div>
+        <p class="radioLabel">No, I don't</p>
+    </div>
+  </label>
+  <input name="drink" id = "no" type="radio" value="false" [(ngModel)] = "drinkingDetails.does">
+
+</div>
+
+<div *ngIf="drinkingDetails.does == 'true'" class="container-fluid">
+
+  <p class="montsserat heading">What is your drinking frequency?</p>
+  <label (click)="nextClicked('smoking')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="everyday">
+    <div [ngClass]="[(drinkingDetails.frequency == 'Everyday')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Almost Every Day</p>
+    </div>
+  </label>
+  <input name="drink-frequency" id = "everyday" type="radio" value="Everyday" [(ngModel)] = "drinkingDetails.frequency">
+
+  <label (click)="nextClicked('smoking')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="fewTimes">
+    <div [ngClass]="[(drinkingDetails.frequency == 'Few times a week')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Few times a week</p>
+    </div>
+  </label>
+  <input name="drink-frequency" id = "fewTimes" type="radio" value="Few times a week" [(ngModel)] = "drinkingDetails.frequency">
+
+
+  <label (click)="nextClicked('smoking')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="onceWeek">
+    <div [ngClass]="[(drinkingDetails.frequency == 'Once a week')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Once a week</p>
+    </div>
+  </label>
+  <input name="drink-frequency" id = "onceWeek" type="radio" value="Once a week" [(ngModel)] = "drinkingDetails.frequency">
+
+  <label (click)="nextClicked('smoking')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="monthly">
+    <div [ngClass]="[(drinkingDetails.frequency == 'Once a month')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Once a month</p>
+    </div>
+  </label>
+  <input name="drink-frequency" id = "monthly" type="radio" value="Once a month" [(ngModel)] = "drinkingDetails.frequency">
+
+  <label (click)="nextClicked('smoking')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="occasionally">
+    <div [ngClass]="[(drinkingDetails.frequency == 'Occasionally')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">On special occasions</p>
+    </div>
+  </label>
+  <input name="drink-frequency" id = "occasionally" type="radio" value="Occasionally" [(ngModel)] = "drinkingDetails.frequency">
+
+</div>

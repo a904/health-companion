@@ -1,0 +1,50 @@
+<eating-type
+(showNextNutritionComponent) = "onNavigateNutrition($event)"
+(sendEatingPreferencesValue) = "setNutritionValue($event, 'eating-type')"
+*ngIf = "currentNutritionComponent === 'eating-type'">
+</eating-type>
+
+<thoughts
+(showNextNutritionComponent) = "onNavigateNutrition($event)"
+(sendThoughtsValue) = "setNutritionValue($event, 'thoughts')"
+*ngIf = "currentNutritionComponent === 'thoughts'">
+</thoughts>
+
+<junk-food
+(showNextNutritionComponent) = "onNavigateNutrition($event)"
+(sendJunkFoodValue) = "setNutritionValue($event, 'junk-food')"
+*ngIf = "currentNutritionComponent === 'junk-food'">
+</junk-food>
+
+<drink
+(showNextNutritionComponent) = "onNavigateNutrition($event)"
+(sendDrinkingValue) = "setNutritionValue($event, 'drinking')"
+*ngIf = "currentNutritionComponent === 'drink'">
+</drink>
+
+<smoking
+(showNextNutritionComponent) = "onNavigateNutrition($event)"
+(sendSmokingDetailsValue) = "setNutritionValue($event, 'smoking')"
+*ngIf = "currentNutritionComponent === 'smoking'">
+</smoking>
+
+<eating-habit
+(showNextNutritionComponent) = "onNavigateNutrition($event)"
+(sendEatingHabitValue) = "setNutritionValue($event, 'eatingHabit')"
+*ngIf = "currentNutritionComponent === 'eating-habit'"></eating-habit>
+
+<food-type
+(showNextNutritionComponent) = "onNavigateNutrition($event)"
+(sendFoodTypesValue) = "setNutritionValue($event, 'foodType')"
+*ngIf = "currentNutritionComponent === 'food-type'">
+</food-type>
+
+<fit-narrative
+(showNextNutritionComponent) = "onNavigateNutrition($event)"
+*ngIf = "currentNutritionComponent === 'next-narrative'">
+  The fat in the food we eat is not the fat which gets stored in our body. What we eat, when and how much actually determines how much fat our body stores. Starving the body to lose weight is neither correct nor sustainable, we should always eat enough to sustain our Basal Metabolic Rate. Rule of thumb for a healthy life typically, for an individual with no restrictions, is "Eat meat (for non-vegetarians) and vegetables, nuts and seeds, some fruit, little starch and no sugar". A lot of the energy from the food we eat is consumed by our body when we are sleeping!
+</fit-narrative>
+<button class="nextButton" type="button" name="button" (click)="nextClicked('mind-section')"
+*ngIf = "currentNutritionComponent === 'next-narrative'">
+  Next
+</button>

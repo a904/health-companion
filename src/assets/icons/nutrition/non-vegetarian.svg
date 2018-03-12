@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 45.2 (43514) - http://www.bohemiancoding.com/sketch -->
+    <title>728E6760-E02E-4EE8-8F11-F1FFEF0C72D2</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="45.606 45.3633 45.606 0.243 0.3372 0.243 0.3372 45.3633 45.606 45.3633"></polygon>
+    </defs>
+    <g id="survey" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="-Nutrition" transform="translate(-653.000000, -383.000000)">
+            <g id="Group-61" transform="translate(175.000000, 308.000000)">
+                <g id="Group-60">
+                    <g id="nonVegetarian" transform="translate(478.000000, 74.000000)">
+                        <g id="Group-5" transform="translate(30.000000, 0.757300)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-4"></g>
+                            <path d="M40.9962,6.6283 C44.2702,7.8513 46.2502,10.6373 45.4152,12.8583 C44.5812,15.0783 41.2362,15.8633 37.9702,14.6323 C37.8492,14.5833 37.6302,14.4343 37.5952,14.4703 L6.7012,45.3633 L0.3372,38.9993 L31.2312,8.1063 C31.2662,8.0713 31.2132,7.9473 31.1642,7.8273 C29.9262,4.5533 30.7692,1.2663 32.9902,0.4323 C35.2102,-0.4017 38.0152,1.5963 39.2452,4.8773 C39.4152,5.3303 39.5512,5.7773 39.6432,6.2233 C40.0892,6.3153 40.5432,6.4583 40.9962,6.6283" id="Fill-3" fill="#BDBDBD" mask="url(#mask-2)"></path>
+                        </g>
+                        <path d="M29.4904,68.2686 C21.8804,74.0886 12.8804,71.3886 12.8804,71.3886 C12.8804,71.3886 30.3404,64.8486 43.4304,49.2786 C43.4304,49.2786 38.7104,61.2086 29.4904,68.2686 M49.0904,27.6686 C41.4504,20.0286 16.3804,32.7286 7.4504,41.6586 C-1.4796,50.5886 -2.5296,64.0186 5.1004,71.6486 C12.7304,79.2886 26.1604,78.2386 35.0904,69.3086 C44.0204,60.3786 56.7204,35.2986 49.0904,27.6686" id="Fill-1" fill="#A48181"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

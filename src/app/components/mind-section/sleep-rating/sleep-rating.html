@@ -1,0 +1,31 @@
+<div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+  <p class="montsserat heading">If I had to rate my quality of sleep on a scale of 1 - 10, with 1 being very bad, I feel cranky when I get up in the morning to 10 being wonderful, I feel rejuvenated after my sleep. I would say….</p>
+  <div class="row">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <span><img style="width: auto; height: auto;" src="assets/icons/mind/cranky.svg" alt=""></span>
+    </div>
+    <div style="float: right;" class="col-xs-2 col-sm-2  col-md-2  col-lg-2 ">
+      <span><img style="width: auto; height: auto;" src="assets/icons/mind/rejuvenated.svg" alt=""></span>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <input
+    type="range" list="steplist"
+    min="1" max="10" step="1"
+    name="rating"
+    [(ngModel)] = "sleepRating" >
+      <datalist id="steplist">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+      </datalist>
+  </div>
+  <button class="nextButton" type="button" name="button" (click)="nextClicked('sleep-duration')">Next</button>
+</div>

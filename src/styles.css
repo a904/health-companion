@@ -1,0 +1,288 @@
+/*Bootstrap import*/
+@import '~bootstrap/dist/css/bootstrap.css';
+html{
+  min-width: 20em;
+  height: 100%;
+}
+body {
+  background-color: #fbfbfb;
+}
+
+.noPadding {
+  paddin: 0px;
+}
+
+/*Font styles classes*/
+.montsserat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
+
+/*Utility Classes*/
+.smallFont {
+  font-size: 15px;
+}
+.bigFont {
+  font-size: 18px;
+}
+
+
+.unchecked {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  background-color: #fff;
+}
+
+.checked {
+  background-color: #eee;
+  color: #31729f;
+}
+
+input[type=checkbox]{
+  display: none;
+}
+
+input[type=text] {
+  margin: 15px 0 15px 0;
+  border: 2px solid #eee;
+  border-radius: 3px;
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+
+/*Radio Buttons styling*/
+input[type=radio]{
+  display: none;
+}
+
+/*Radio buttons with icons*/
+.radio-card {
+  border-radius: 3px;
+  margin: 10px;
+  position: relative;
+  box-shadow: 2px 2px 2px #dadada;
+  -webkit-transition: 0.15s ease-in-out;
+  -moz-transition: 0.15s ease-in-out;
+  -o-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+  .smallRadio {
+    height: 179px;
+    width: 132px;
+  }
+  .bigRadio {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 150px;
+    height: 420px;
+  }
+  .withoutIcon {
+    padding: 10px 10px 10px 40px;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 10vh;
+  }
+
+  .radio-card:hover {
+    box-shadow: 4px 4px 4px #dadada;
+    -webkit-transform: scale(1.05, 1.1);
+    -moz-transform: scale(1.05, 1.1);
+    -o-transform: scale(1.05, 1.1);
+    -ms-transform: scale(1.05, 1.1);
+    transform: scale(1.05, 1.1);
+  }
+
+.radioLabel {
+  position: absolute;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: normal;
+  margin: 1px;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-family: 'Raleway', sans-serif;
+}
+
+.majorButton {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 2px solid #40a2e6;
+  cursor: pointer;
+  color: #40a2e6;
+  font-family: Arial;
+  font-size: 16px;
+  padding: 8px 24px;
+  text-decoration: none;
+}
+  .majorButton:hover {
+    background-color:#40a2e6;
+    color: #fff;
+  }
+  .majorButton:active {
+    position:relative;
+    top:1px;
+  }
+
+.nextButton {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #40a2e6;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 2px solid #2f83bd;
+  display: block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 16px;
+  padding: 6px 18px;
+  text-decoration: none;
+  transition: background-color 0.25s;
+}
+  .nextButton:hover {
+    background-color:#2f83bd;
+  }
+  .nextButton:disabled {
+    background-color: #bbb;
+    color: #888;
+    border: 2px solid #999;
+    cursor: not-allowed;
+
+  }
+
+.smallButton {
+  background-color: #91e5be;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 2px solid #63cba2;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 8px 25px;
+  text-decoration: none;
+}
+  .smallButton:hover {
+    background-color:#63cba2;
+  }
+  .smallButton:active {
+    position:relative;
+    top:1px;
+  }
+
+
+
+/*Input fields styling*/
+.inputField {
+  padding: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid #ddd;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  background-color: #fbfbfb;
+}
+
+.subSection {
+  margin-top: 20px;
+}
+
+/*Styling icons to centre them and fit their container*/
+.icon {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
+
+.iconBig {
+  postions: absolute;
+  top: 75px;
+  width: 100px;
+  height: 300px;
+}
+
+.heading {
+  margin: 3vh 0 3vh 0;
+  font-size: 22px;
+}
+
+/*Range input styling*/
+input[type=range] {
+  background-color: #fbfbfb;
+}
+
+input[type='range'], input[type='range']::-webkit-slider-runnable-track, input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  box-sizing: border-box;
+  padding: 0.125em;
+  height: 0.7em;
+  background: linear-gradient(#eee, #eee) content-box;
+}
+input[type='range']::-moz-range-track {
+  box-sizing: border-box;
+  padding: 0.125em;
+  height: 0.7em;
+  background: linear-gradient(#eee, #eee) content-box;
+}
+input[type='range']::-ms-track {
+  box-sizing: border-box;
+  padding: 0.125em;
+  height: 0.7em;
+  background: linear-gradient(#eee, #eee) content-box;
+}
+input[type='range']::-webkit-slider-thumb{
+  margin-top: -0.825em;
+  width: 0.75em;
+  height: 2em;
+  border-radius: 0.5em;
+  background-color: #444;
+  cursor: ns-resize;
+}
+input[type='range']::-moz-range-thumb {
+  box-sizing: border-box;
+  border: solid 0 transparent;
+  border-width: 1px .3125em;
+  width: 0.75em;
+  height: 2em;
+  border-radius: 0.5em;
+  box-shadow: -0.84375em 0 0.84375em -0.84375em #111, -0.84375em 0 1.125em -0.84375em #111, -0.84375em 0 1.40625em -0.84375em #111, -0.84375em 0 1.6875em -0.84375em #111, -0.84375em 0 1.96875em -0.84375em #111, -1.125em 0 2.25em -0.84375em #111;
+  background: linear-gradient(90deg, #f5f5f5, #bbbbbb) content-box, linear-gradient(90deg, #a9a9a7, #f7f7f7) border-box;
+  cursor: ns-resize;
+}
+input[type='range']::-ms-thumb {
+  box-sizing: border-box;
+  border: solid 0 transparent;
+  border-width: 1px .3125em;
+  width: 0.75em;
+  height: 2em;
+  border-radius: 0.5em;
+  box-shadow: -0.84375em 0 0.84375em -0.84375em #111, -0.84375em 0 1.125em -0.84375em #111, -0.84375em 0 1.40625em -0.84375em #111, -0.84375em 0 1.6875em -0.84375em #111, -0.84375em 0 1.96875em -0.84375em #111, -1.125em 0 2.25em -0.84375em #111;
+  background: linear-gradient(90deg, #f5f5f5, #bbbbbb) content-box, linear-gradient(90deg, #a9a9a7, #f7f7f7) border-box;
+  cursor: ns-resize;
+}
+/*input[type='range']:focus {
+  display: none;
+}*/

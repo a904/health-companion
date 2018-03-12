@@ -1,0 +1,184 @@
+<p class="montsserat heading">What activities have you been doing already?</p>
+<p class="raleway">(You can choose multiple)</p>
+
+<div class="container-fluid">
+
+  <label for="sport">
+    <div [ngClass]="[activities.sport ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/sports.svg" alt="">
+        </div>
+        <p class="radioLabel">Sports</p>
+    </div>
+  </label>
+  <input name="sport" id = "sport" type="checkbox" [(ngModel)] = "activities.sport">
+
+  <label for="weightlifting">
+    <div [ngClass]="[activities.weightlifting ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/weightlifting.svg" alt="">
+        </div>
+        <p class="radioLabel">Weightlifting</p>
+    </div>
+  </label>
+  <input name="weightlifting" id = "weightlifting" type="checkbox" [(ngModel)] = "activities.weightlifting">
+
+  <label for="gymnastics">
+    <div [ngClass]="[activities.gymnastics ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/gymnastics.svg" alt="">
+        </div>
+        <p class="radioLabel">Gymnastics</p>
+    </div>
+  </label>
+  <input name="bodyWeightExercises" id = "gymnastics" type="checkbox" [(ngModel)] = "activities.gymnastics">
+
+  <label for="yoga">
+    <div [ngClass]="[activities.yoga ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/yoga.svg" alt="">
+        </div>
+        <p class="radioLabel">Yoga</p>
+    </div>
+  </label>
+  <input name="bodyWeightExercises" id = "yoga" type="checkbox" [(ngModel)] = "activities.yoga">
+
+  <label for="dance">
+    <div [ngClass]="[activities.dance ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/dance.svg" alt="">
+        </div>
+        <p class="radioLabel">Dance</p>
+    </div>
+  </label>
+  <input name="bodyWeightExercises" id = "dance" type="checkbox" [(ngModel)] = "activities.dance">
+
+  <label for="martialArts">
+    <div [ngClass]="[activities.martialArts ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/martial-arts.svg" alt="">
+        </div>
+        <p class="radioLabel">Martial Arts</p>
+    </div>
+  </label>
+  <input name="bodyWeightExercises" id = "martialArts" type="checkbox" [(ngModel)] = "activities.martialArts">
+
+  <label for="walking">
+    <div [ngClass]="[activities.walking ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img style="height: 120px; width: auto;" class="icon" src="assets/icons/activity/walking.svg" alt="">
+        </div>
+        <p class="radioLabel">Walking</p>
+    </div>
+  </label>
+  <input name="metCon" id = "walking" type="checkbox" [(ngModel)] = "activities.walking">
+
+  <label for="running">
+    <div [ngClass]="[activities.running ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/running.svg" alt="">
+        </div>
+        <p class="radioLabel">Running</p>
+    </div>
+  </label>
+  <input name="metCon" id = "running" type="checkbox" [(ngModel)] = "activities.running">
+
+  <!-- <label for="riding">
+    <div [ngClass]="[activities.riding ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/riding.svg" alt="">
+        </div>
+        <p class="radioLabel">Dance</p>
+    </div>
+  </label>
+  <input name="metCon" id = "running" type="checkbox" [(ngModel)] = "activities.riding"> -->
+
+  <label for="swimming">
+    <div [ngClass]="[activities.swimming ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/swimming.svg" alt="">
+        </div>
+        <p class="radioLabel">Swimming</p>
+    </div>
+  </label>
+  <input name="metCon" id = "swimming" type="checkbox" [(ngModel)] = "activities.swimming">
+
+  <label for="skiing">
+    <div [ngClass]="[activities.skiing ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/skiing.svg" alt="">
+        </div>
+        <p class="radioLabel">Skiing</p>
+    </div>
+  </label>
+  <input name="metCon" id = "skiing" type="checkbox" [(ngModel)] = "activities.skiing">
+
+  <label for="rowing">
+    <div [ngClass]="[activities.rowing ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/rowing.svg" alt="">
+        </div>
+        <p class="radioLabel">Rowing</p>
+    </div>
+  </label>
+  <input name="metCon" id = "rowing" type="checkbox" [(ngModel)] = "activities.rowing">
+
+  <label for="skating">
+    <div [ngClass]="[activities.skating ?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/activity/skating.svg" alt="">
+        </div>
+        <p class="radioLabel">Skating</p>
+    </div>
+  </label>
+  <input name="metCon" id = "skating" type="checkbox" [(ngModel)] = "activities.skating">
+
+</div>
+
+<!-- <div class="selcted-activities">
+  <h3>Selected activities</h3>
+  <hr>
+  <ul>
+    <li *ngIf="activities.sport">
+      Sports
+    </li>
+    <li *ngIf="activities.weightlifting">
+      weightlifting
+    </li>
+    <li *ngIf="activities.gymnastics">
+      gymnastics
+    </li>
+    <li *ngIf="activities.yoga">
+      yoga
+    </li>
+    <li *ngIf="activities.dance">
+      dance
+    </li>
+    <li *ngIf="activities.martialArts">
+      martialArts
+    </li>
+    <li *ngIf="activities.walking">
+      walking
+    </li>
+    <li *ngIf="activities.running">
+      running
+    </li>
+    <li *ngIf="activities.riding">
+      riding
+    </li>
+    <li *ngIf="activities.swimming">
+      swimming
+    </li>
+    <li *ngIf="activities.skiing">
+      skiing
+    </li>
+    <li *ngIf="activities.rowing">
+      rowing
+    </li>
+    <li *ngIf="activities.skating">
+      skating
+    </li>
+  </ul>
+</div> -->
+
+<button class="nextButton" type="button" name="button" (click)="nextClicked('weekly-hours')">Next</button>

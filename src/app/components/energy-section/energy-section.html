@@ -1,0 +1,21 @@
+<active
+(showNextEnergyComponent) = "onNavigateEnergy($event)"
+(sendActiveLevelValue) = "setActiveLevelValue($event)"
+*ngIf = "currentEnergyComponent === 'active'">
+</active>
+
+<bmr
+(showNextEnergyComponent) = "onNavigateEnergy($event)"
+[forDisplay] = "this.energyValues.bmr"
+*ngIf = "currentEnergyComponent === 'bmr'">
+</bmr>
+
+<fit-narrative *ngIf = "currentEnergyComponent === 'next-narrative'">
+  But, if you are thinking of eating more or less to adjust your weight, it is not that simple. Our body is smarter than we think. It quickly adapts to how much we eat and accordingly adjusts our Basal Metabolic Rate. If we start eating less than we require, our body will start giving less fuel to our organs and still keep storing it as fat - making us feel lethargic and unhealthy. What we eat, when and how much are crucial for healthy living! Let's get to know more about your eating habits.
+</fit-narrative>
+
+<button class="nextButton" type="button" name="button"
+(click)="nextClicked('nutrition-section')"
+*ngIf = "currentEnergyComponent === 'next-narrative'">
+  Next
+</button>

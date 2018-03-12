@@ -1,0 +1,28 @@
+<p class="montsserat heading">You have any Pains/Injuries?</p>
+
+<button class="smallButton" type="button" name="button"
+(click)="setHasPainsValue(true)">
+  Yes
+</button>
+<button class="smallButton" type="button" name="button"
+(click)="setHasPainsValue(false)">
+  No
+</button>
+
+<div *ngIf="hasPains" class="hasPains">
+  <input
+  class="inputField"
+  type="text"
+  placeholder="mention the Pains/Injuries (you can add multiple)"
+  list="suggestions"
+  [(ngModel)]="pain">
+  <datalist id="suggestions">
+    <option value="Shoulder"></option>
+    <option value="Neck"></option>
+    <option value="Knee"></option>
+    <option value="Back"></option>
+  </datalist>
+  <button
+  class="smallButton" type="button" name="addButton"
+  (click)="addPain()">Add</button>
+</div>

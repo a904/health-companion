@@ -1,0 +1,32 @@
+<p class="montsserat heading">I indulge in junk/fast food</p>
+<br>
+<div class="container-fluid">
+
+  <label (click)="nextClicked('drink')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="everyday">
+    <div [ngClass]="[(junkFood == 'Everyday')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Everyday</p>
+    </div>
+  </label>
+  <input id = "everyday" type="radio" value="Everyday" [(ngModel)] = "junkFood">
+
+  <label (click)="nextClicked('drink')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="fewTimes">
+    <div [ngClass]="[(junkFood == '2-3 times a week')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">2-3 times a Week</p>
+    </div>
+  </label>
+  <input id = "fewTimes" type="radio" value="2-3 times a week" [(ngModel)] = "junkFood">
+
+  <label (click)="nextClicked('drink')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="onceWeek">
+    <div [ngClass]="[(junkFood == 'Once a week')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Once a week</p>
+    </div>
+  </label>
+  <input id = "onceWeek" type="radio" value="Once a week" [(ngModel)] = "junkFood">
+
+  <label (click)="nextClicked('drink')" class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 col-xs-12" for="Rarely">
+    <div [ngClass]="[(junkFood == 'Rarely')?'checked':'unchecked']" class="radio-card withoutIcon">
+        <p class="raleway">Rarely</p>
+    </div>
+  </label>
+  <input id = "Rarely" type="radio" value="Rarely" [(ngModel)] = "junkFood">
+</div>

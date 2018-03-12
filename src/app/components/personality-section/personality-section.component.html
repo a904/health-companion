@@ -1,0 +1,47 @@
+
+<app-general (showNextPersonalityComponent) = "onNavigatePersonality($event)"
+(sendGeneralValue) = "setPersonalityValues($event, 'general')"
+*ngIf = "currentPersonalityComponent === 'general'">
+</app-general>
+
+<app-logical
+(showNextPersonalityComponent) = "onNavigatePersonality($event)"
+(sendLogicalValue) = "setPersonalityValues($event, 'logical')"
+*ngIf = "currentPersonalityComponent === 'logical'">
+</app-logical>
+
+<app-situation
+(showNextPersonalityComponent) = "onNavigatePersonality($event)"
+(sendSituationValue) = "setPersonalityValues($event, 'situation')"
+*ngIf = "currentPersonalityComponent === 'situation'">
+</app-situation>
+
+<app-planning
+(showNextPersonalityComponent) = "onNavigatePersonality($event)"
+(sendPlanningValue) = "setPersonalityValues($event, 'planning')"
+*ngIf = "currentPersonalityComponent === 'planning'">
+</app-planning>
+
+<app-live-with
+(showNextPersonalityComponent) = "onNavigatePersonality($event)"
+(sendLiveWithValue) = "setPersonalityValues($event, 'liveWith')"
+*ngIf = "currentPersonalityComponent === 'live-with'">
+</app-live-with>
+
+<travel
+(showNextPersonalityComponent) = "onNavigatePersonality($event)"
+(sendTravelValue) = "setPersonalityValues($event, 'travel')"
+*ngIf = "currentPersonalityComponent === 'travel'">
+</travel>
+
+<app-aspirations
+(showNextPersonalityComponent) = "onNavigatePersonality($event)"
+(sendAspirationsValue) = "setPersonalityValues($event, 'aspirations')"
+*ngIf = "currentPersonalityComponent === 'aspirations'">
+</app-aspirations>
+
+<app-holding-back
+(showNextPersonalityComponent) = "onNavigatePersonality($event)"
+(sendHoldingBackValue) = "setPersonalityValues($event, 'holdingBack')"
+*ngIf = "currentPersonalityComponent === 'holding-back'">
+</app-holding-back>

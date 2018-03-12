@@ -1,0 +1,96 @@
+.heightDisplay {
+  position: absolute;
+  top: 30%;
+  left: 53%;
+}
+
+button {
+  position: absolute;
+  bottom: 34%;
+  left: 40%;
+}
+
+input[type=range] {
+  position: absolute;
+  border: solid 0 transparent;
+  border-width: 0 0.5em 0.75em;
+  padding: 0 0 1.5em;
+  width: 15.85em;
+  height: 4.5em;
+  border-radius: .25em;
+  font-size: 1em;
+  cursor: pointer;
+  top:35%;
+  left: 42%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  background: linear-gradient(#868686, #868686) calc(100% - 0.1825em) calc(100% - 0.6875em), linear-gradient(90deg, #868686, #868686 0.125em, rgba(0, 0, 0, 0) 0.125em, rgba(0, 0, 0, 0) 18.635em) 0.495em calc(100% - 0.375em), radial-gradient(#919191, rgba(145, 145, 145, 0)) 2.3125em 100%, radial-gradient(#919191, rgba(145, 145, 145, 0)) 3.8125em 100%, radial-gradient(#919191, rgba(145, 145, 145, 0)) 5.3125em 100%, radial-gradient(#919191, rgba(145, 145, 145, 0)) 6.8125em 100%, radial-gradient(#919191, rgba(145, 145, 145, 0)) 8.3125em 100%, radial-gradient(#919191, rgba(145, 145, 145, 0)) 9.8125em 100%, radial-gradient(#919191, rgba(145, 145, 145, 0)) 11.3125em 100%, radial-gradient(#919191, rgba(145, 145, 145, 0)) 12.8125em 100%, radial-gradient(#919191, rgba(145, 145, 145, 0)) 14.3125em 100%, radial-gradient(#919191, rgba(145, 145, 145, 0)) 15.8125em 100%, radial-gradient(#919191, rgba(145, 145, 145, 0)) 17.3125em 100%;
+  background-repeat: no-repeat, repeat-x, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 0.75em 0.125em, 18.635em 0.75em, 0.125em 1.5em, 0.125em 1.5em, 0.125em 1.5em, 0.125em 1.5em, 0.125em 1.5em, 0.125em 1.5em, 0.125em 1.5em, 0.125em 1.5em, 0.125em 1.5em, 0.125em 1.5em, 0.125em 1.5em;
+}
+
+
+input[type='range'], input[type='range']::-webkit-slider-runnable-track, input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  box-sizing: border-box;
+  padding: 0.125em;
+  width: 19.75em;
+  height: 0.7em;
+  background: linear-gradient(#eee, #eee) content-box;
+}
+input[type='range']::-moz-range-track {
+  box-sizing: border-box;
+  padding: 0.125em;
+  width: 19.75em;
+  height: 0.7em;
+  background: linear-gradient(#eee, #eee) content-box;
+}
+input[type='range']::-ms-track {
+  box-sizing: border-box;
+  padding: 0.125em;
+  width: 19.75em;
+  height: 0.7em;
+  background: linear-gradient(#eee, #eee) content-box;
+}
+input[type='range']::-webkit-slider-thumb{
+  margin-top: -0.825em;
+  width: 0.75em;
+  height: 2em;
+  border-radius: 0.5em;
+  background-color: #444;
+  cursor: ns-resize;
+}
+input[type='range']::-moz-range-thumb {
+  box-sizing: border-box;
+  border: solid 0 transparent;
+  border-width: 1px .3125em;
+  width: 0.75em;
+  height: 2em;
+  border-radius: 0.5em;
+  box-shadow: -0.84375em 0 0.84375em -0.84375em #111, -0.84375em 0 1.125em -0.84375em #111, -0.84375em 0 1.40625em -0.84375em #111, -0.84375em 0 1.6875em -0.84375em #111, -0.84375em 0 1.96875em -0.84375em #111, -1.125em 0 2.25em -0.84375em #111;
+  background: linear-gradient(90deg, #f5f5f5, #bbbbbb) content-box, linear-gradient(90deg, #a9a9a7, #f7f7f7) border-box;
+  cursor: ns-resize;
+}
+input[type='range']::-ms-thumb {
+  box-sizing: border-box;
+  border: solid 0 transparent;
+  border-width: 1px .3125em;
+  width: 0.75em;
+  height: 2em;
+  border-radius: 0.5em;
+  box-shadow: -0.84375em 0 0.84375em -0.84375em #111, -0.84375em 0 1.125em -0.84375em #111, -0.84375em 0 1.40625em -0.84375em #111, -0.84375em 0 1.6875em -0.84375em #111, -0.84375em 0 1.96875em -0.84375em #111, -1.125em 0 2.25em -0.84375em #111;
+  background: linear-gradient(90deg, #f5f5f5, #bbbbbb) content-box, linear-gradient(90deg, #a9a9a7, #f7f7f7) border-box;
+  cursor: ns-resize;
+}
+input[type='range']::-ms-fill-lower, input[type='range']::-ms-tooltip {
+  display: none;
+}
+input[type='range']:nth-of-type(2) {
+  left: 66%;
+  transform: translate(-50%, -50%) rotate(-90deg) scaleY(-1);
+}
+input[type='range']:focus {
+  outline: none;
+  box-shadow: 0 0 .25em #808080;
+}

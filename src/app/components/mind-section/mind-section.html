@@ -1,0 +1,19 @@
+<sleep-rating (showNextMindComponent)="onNavigateMind($event)" (sendSleepRatingValue)="setMindValue($event, 'sleepRating')" *ngIf="currentMindComponent === 'sleep-rating'">
+</sleep-rating>
+
+<sleep-duration (showNextMindComponent)="onNavigateMind($event)" (sendSleepDetailsValue)="setMindValue($event, 'sleepDetails')" *ngIf="currentMindComponent === 'sleep-duration'">
+</sleep-duration>
+
+<stress (showNextMindComponent)="onNavigateMind($event)" (sendSleepRatingValue)="setMindValue($event, 'stressDetails')" *ngIf="currentMindComponent === 'stress'">
+</stress>
+
+<meditate (showNextMindComponent)="onNavigateMind($event)" (sendMeditationValue)="setMindValue($event, 'meditates')" *ngIf="currentMindComponent === 'meditate'">
+</meditate>
+
+<fit-narrative *ngIf="currentMindComponent === 'next-narrative'">
+  Apart from meditation, playing is great stress busters too! Exercising also helps us burna bit of calories but more importantly, helps us become stronger, faster, more ﬂexible, in short... a better version of ourselves
+</fit-narrative>
+
+<button class="nextButton" type="button" name="button" (click)="nextClicked('activity-section')" *ngIf="currentMindComponent === 'next-narrative'">
+  Next
+</button>

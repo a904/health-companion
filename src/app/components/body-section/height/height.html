@@ -1,0 +1,10 @@
+<p class="montsserat heading">When standing tall, I am (in cms/ft)</p>
+<div class="heightInput">
+  <input
+  type="range" min = "120" max = "240" step = "1"
+  (change)="heightFeetCalculate()" [(ngModel)]="height">
+  <div style="color: #2f83bd;" class="heightDisplay montsserat"><h2 style="margin: 0px;">{{heightFeet}} ft</h2> <br>{{height}} cm</div>
+</div>
+<button
+  class="nextButton" type="button" name="button"
+  (click)="nextClicked('weight')">Next</button>

@@ -1,0 +1,25 @@
+.narrative-container {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+  .logo {
+    position: relative;
+    height: 16vh;
+    width: 16vh;
+    border-radius: 8vh;
+    background-color: #fff;
+    border: 2px #ededed solid;
+    box-shadow: 2px 2px 2px 0px #eee;
+  }
+
+  .text-area {
+    border: 2px #ededed solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 0px #eee;
+    padding: 20px 40px 20px 20px;
+    text-align: left;
+    width: 70%;
+    height: auto;
+    background-color: #fff;
+  }

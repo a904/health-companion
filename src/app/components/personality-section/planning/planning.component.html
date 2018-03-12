@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+    <p class="montsserat heading">The way I act in the outer world is</p>
+    <div class="row">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <span><img style="width: 25%; height: auto" src="assets/icons/personality/judging@2x.png" alt=""></span>
+        <p class="montsserat">Judging acts according to a plan, consistent</p>
+      </div>
+      <div style="float: right;" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        <span><img style="width: 50%; height: auto;" src="assets/icons/personality/perception@2x.png" alt=""></span>
+        <p class="montsserat">P acts according to a situation: flexible and impulsive</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <input
+      type="range" list="steplist"
+      min="1" max="4" step="1"
+      name="rating"
+      [(ngModel)] = "planning">
+        <datalist id="steplist">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </datalist>
+    </div>
+  </div>
+</div>
+
+<button class="nextButton" type="button" name="button" (click)="nextClicked('live-with')">Next</button>

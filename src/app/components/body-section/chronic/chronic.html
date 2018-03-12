@@ -1,0 +1,28 @@
+<p class="montsserat heading">Are you suffering from any of the chronic diseases?</p>
+
+<button class="smallButton" type="button" name="button"
+(click)="setHasChronicValue(true)">
+  Yes
+</button>
+<button (click)="nextClicked('allergies')" class="smallButton" type="button" name="button"
+(click)="setHasChronicValue(false)">
+  No
+</button>
+
+<div *ngIf="hasChronic" class="hasChronic">
+  <input class="inputField" type="text"
+        placeholder="mention the diseases (you can add multiple)"
+        list="suggestions"
+        [(ngModel)]="disease">
+  <datalist id="suggestions">
+    <option value="Asthma"></option>
+    <option value="Arthritis"></option>
+    <option value="Stress"></option>
+    <option value="Inflammation"></option>
+    <option value="Aneamia"></option>
+    <option value="Kidney Diseases"></option>
+  </datalist>
+  <button class="smallButton" type="button" name="button" (click)="addDisease()">Add</button>
+</div>
+
+<button *ngIf="diseases[0]" class="nextButton" type="button" name="button" (click)="nextClicked('allergies')">Next</button>

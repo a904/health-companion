@@ -1,0 +1,77 @@
+<fit-narrative>
+  Let's explore more about your eating habits
+</fit-narrative>
+
+<p class="montsserat heading">My food preferences are</p>
+
+<div class="container">
+  <label for="vegan">
+    <div [ngClass]="[(eatingPreferences.type == 'Vegan')?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/vegan.svg" alt="">
+        </div>
+        <div class="radioLabel">Vegan</div>
+    </div>
+  </label>
+  <input
+  id="vegan" type="radio"
+  name="eating-habit" value="Vegan"
+  [(ngModel)] = "eatingPreferences.type">
+
+  <label for="vegetarian">
+    <div [ngClass]="[(eatingPreferences.type == 'Vegetarian')?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/vegetarian.svg" alt="">
+        </div>
+        <div class="radioLabel">Vegetarian</div>
+    </div>
+  </label>
+  <input
+  id="vegetarian" type="radio"
+  name="eating-habit" value="Vegetarian"
+  [(ngModel)] = "eatingPreferences.type">
+
+  <label for="eggetarian">
+    <div [ngClass]="[(eatingPreferences.type == 'Eggetarian')?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/eggetarian.svg" alt="">
+        </div>
+        <div class="radioLabel">Eggetarian</div>
+    </div>
+  </label>
+  <input
+  id="eggetarian" type="radio"
+  name="eating-habit" value="Eggetarian"
+  [(ngModel)] = "eatingPreferences.type">
+
+  <label for="nonVegetarian">
+    <div [ngClass]="[(eatingPreferences.type == 'Non-Vegetarian')?'checked':'unchecked']" class="radio-card smallRadio">
+        <div>
+            <img class="icon" src="assets/icons/nutrition/non-vegetarian.svg" alt="">
+        </div>
+        <div class="radioLabel">Non-Vegetarian</div>
+    </div>
+  </label>
+  <input
+  id="nonVegetarian" type="radio"
+  name="eating-habit" value="Non-Vegetarian"
+  [(ngModel)] = "eatingPreferences.type">
+
+</div>
+
+<input *ngIf="eatingPreferences.type"
+  class="inputField" type="text"
+  placeholder="Foods you avoid..."
+  [(ngModel)]="avoid">
+<button *ngIf="eatingPreferences.type"
+  class="smallButton" type="button"
+  name="button"
+  (click)="addAvoidItems()">
+  Add
+</button>
+
+<button *ngIf="eatingPreferences.type" class="nextButton"
+  type="button" name="button"
+  (click)="nextClicked('thoughts')">
+  Next
+</button>

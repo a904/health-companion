@@ -1,0 +1,23 @@
+<p class="montsserat heading">Anatomically, I am</p>
+<div class="container">
+  <label for="male" (click) = "nextClicked('dob')">
+    <div [ngClass]="[(gender == 'male')?'checked':'unchecked']" class="radio-card smallRadio">
+        <div class="icon">
+            <img src="assets/icons/body/male-icon.svg" alt="">
+        </div>
+        <p class="radioLabel">Male</p>
+    </div>
+  </label>
+  <input id = "male" type="radio" value="male" [(ngModel)] = "gender">
+
+  <label for="female" (click) = "nextClicked('dob')">
+    <div [ngClass]="[(gender == 'female')?'checked':'unchecked']" class="radio-card smallRadio">
+      <div class="icon">
+          <img src="assets/icons/body/female-icon.svg" alt="">
+      </div>
+    <div class="radioLabel">Female</div>
+  </div>
+  </label>
+  <input id="female" type="radio" value="female" [(ngModel)] = "gender">
+</div>
+<p class="raleway">Men and Women have a very different <br>fitness indicator benchmarks</p>

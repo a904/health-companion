@@ -1,0 +1,9 @@
+<h2>How much energy do you usually have throughout the day?</h2>
+<input type="radio" name="energy-level" value="3" [(ngModel)] = "energyLevel">
+<label>So much that I don't know what to do with myself.</label><br>
+<input type="radio" name="energy-level" value="2" [(ngModel)] = "energyLevel">
+<label>I'm generally wide awake during the day.</label><br>
+<input type="radio" name="energy-level" value="1" [(ngModel)] = "energyLevel">
+<label>I need 2 coffees just to get started on anything.</label><br>
+
+<button type="button" name="button" (click)="nextClicked()">Next</button>

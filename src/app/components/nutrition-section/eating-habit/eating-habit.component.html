@@ -1,0 +1,95 @@
+<fit-narrative>
+  <p class="montsserat smallFont">We would like to know a bit more about what do you eat and when.</p>
+</fit-narrative>
+
+<div class="row">
+  <div class="col-md-2 col-lg-2 col-md-offset-2 cl-lg-offset-2">
+    <h2>Breakfast at</h2>
+    <input
+    [(ngModel)]="eatingHabit.breakfast.time"
+    type="time" name="" value="">
+    <h3>and it is about</h3>
+    <span>
+      <input
+      [(ngModel)]="eatingHabit.breakfast.percentage"
+      type="number"
+      name="breakfast" value="40"
+      min="10" max="100" step="10">
+    </span>
+    <span><h3>%</h3></span>
+    <br>
+    <label for="breakfast">I do not eat Breakfast</label>
+    <input
+    [(ngModel)]="eatingHabit.breakfast.doesNotEat"
+    id="breakfast" type="checkbox" name="breakfast" value="false">
+  </div>
+
+  <div class="col-md-2 col-lg-2">
+    <h2>Lunch at</h2>
+    <input
+    [(ngModel)]="eatingHabit.lunch.time"
+    type="time" name="" value="">
+    <h3>and it is about</h3>
+    <span>
+      <input
+      [(ngModel)]="eatingHabit.lunch.percentage"
+      type="number"
+      name="lunch" value="40"
+      min="10" max="100" step="10">
+    </span>
+    <span><h3>%</h3></span>
+    <br>
+    <label for="lunch">I do not eat Lunch</label>
+    <input
+    [(ngModel)]="eatingHabit.lunch.doesNotEat"
+    id="lunch" type="checkbox" name="lunch" value="false">
+  </div>
+
+  <div class="col-md-2 col-lg-2">
+    <h2>Dinner at</h2>
+    <input
+    [(ngModel)]="eatingHabit.dinner.time"
+    type="time" name="" value="">
+    <h3>and it is about</h3>
+    <span>
+      <input
+      [(ngModel)]="eatingHabit.dinner.percentage"
+      type="number"
+      name="dinner" value="40"
+      min="10" max="100" step="10">
+    </span>
+    <span><h3>%</h3></span>
+    <br>
+    <label for="dinner">I do not eat Dinner</label>
+    <input
+    [(ngModel)]="eatingHabit.dinner.doesNotEat"
+    id="dinner" type="checkbox" name="dinner" value="false">
+  </div>
+
+  <div class = "col-md-2 col-lg-2">
+    <h2>Snacks at</h2>
+    <input
+    [(ngModel)]="eatingHabit.snacks.time"
+    type="time" name="" value="">
+    <h3>and it is about</h3>
+    <span>
+      <input
+      [(ngModel)]="eatingHabit.snacks.percentage"
+      type="number"
+      name="snacks" value="40"
+      min="10" max="100" step="10">
+    </span>
+    <span><h3>%</h3></span>
+    <br>
+    <label for="snacks">I do not eat Snacks</label>
+    <input
+    [(ngModel)]="eatingHabit.snacks.doesNotEat"
+    id="snacks" type="checkbox" name="snacks">
+  </div>
+</div>
+<div class="info">
+  This is additonal information.
+</div>
+<br>
+<br>
+<button type="button" name="button" (click)="nextClicked('food-type')">Next</button>

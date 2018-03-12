@@ -1,0 +1,66 @@
+<p class="montsserat heading">If I was standing in front of a mirror, i would resemble the most with?</p>
+<br>
+<label (click)="nextClicked('chronic')" for="essential">
+  <div [ngClass]="[(fatMale == 3)?'checked':'unchecked']" class="radio-card bigRadio">
+      <div>
+          <img class="iconBig" src="assets/icons/fat-icons/male/essential.svg" alt="">
+      </div>
+      <div class="radioLabel">Essential</div>
+  </div>
+</label>
+<input id="essential" type="radio" value="3" [(ngModel)] = "fatMale">
+
+<label (click)="nextClicked('chronice')" for="athletic">
+  <div [ngClass]="[(fatMale == 8)?'checked':'unchecked']" class="radio-card bigRadio">
+      <div>
+          <img class="iconBig" src="assets/icons/fat-icons/male/atheletes.svg" alt="">
+      </div>
+      <div class="radioLabel">Athletic</div>
+  </div>
+</label>
+<input id="athletic"type="radio" value="8" [(ngModel)] = "fatMale">
+
+
+<label (click)="nextClicked('chronic')" for="fitness">
+  <div [ngClass]="[(fatMale == 14)?'checked':'unchecked']" class="radio-card bigRadio">
+      <div>
+          <img class="iconBig" src="assets/icons/fat-icons/male/fitness.svg" alt="">
+      </div>
+      <div class="radioLabel">Fitess</div>
+  </div>
+</label>
+<input id="fitness" type="radio" name="" value="14" [(ngModel)] = "fatMale">
+
+
+<label (click)="nextClicked('chronic')" for="moderate">
+  <div [ngClass]="[(fatMale == 19)?'checked':'unchecked']" class="radio-card bigRadio">
+      <div>
+          <img class="iconBig" src="assets/icons/fat-icons/male/moderate.svg" alt="">
+      </div>
+      <div class="radioLabel">Moderate</div>
+  </div>
+</label>
+<input id="moderate" type="radio" name="" value="19" [(ngModel)] = "fatMale">
+
+<label (click)="nextClicked('chronic')" for="overweight">
+  <div [ngClass]="[(fatMale == 25)?'checked':'unchecked']" class="radio-card bigRadio">
+      <div>
+          <img class="iconBig" src="assets/icons/fat-icons/male/overweight.svg" alt="">
+      </div>
+      <div class="radioLabel">Overweight</div>
+  </div>
+</label>
+<input id="overweight" type="radio" name="" value="25" [(ngModel)] = "fatMale">
+
+<label (click)="nextClicked('chronic')" for="obese">
+  <div [ngClass]="[(fatMale == 35)?'checked':'unchecked']" class="radio-card bigRadio">
+      <div>
+          <img class="iconBig" src="assets/icons/fat-icons/male/obese.svg" alt="">
+      </div>
+      <div class="radioLabel">Obese</div>
+  </div>
+</label>
+<input id="obese" type="radio" name="" value="35" [(ngModel)] = "fatMale">
+
+<!--
+<button class="nextButton"type="button" name="button" (click)="nextClicked('fat-table')">Next</button> -->
