@@ -7,18 +7,10 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 
 export class FinishComponent implements OnInit {
-
-
-  @Output() sendCommentsValue = new EventEmitter<string>();
   @Output() showNextComponent = new EventEmitter<string>();
-
-  commentEntered = false;
-  comments: string = "";
   constructor() { }
 
-  sendComments(nextComponent: string) {
-    this.commentEntered = true;
-    this.sendCommentsValue.emit(this.comments);
+  nextClicked(nextComponent: string) {
     this.showNextComponent.emit(nextComponent);
   }
 

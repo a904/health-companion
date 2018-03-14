@@ -7,3 +7,10 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.icon img {
+  width: 120px;
+  -ms-transform: translate(-28px, -5px); /* IE 9 */
+  -webkit-transform: translate(-28px, -5px); /* Safari */
+  transform: translate(-28px, -5px);
+}

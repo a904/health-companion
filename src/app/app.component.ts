@@ -10,7 +10,7 @@ import { ServerService } from './server.service'
 export class AppComponent {
 
   constructor(private serverService: ServerService) { }
-  currentComponent = 'login-form';
+  currentComponent = 'personality-section';
   sectionValues = {
     userDetails : {
       firstName: "",
@@ -82,9 +82,6 @@ export class AppComponent {
       case "personality": {
         this.sectionValues.personalityValues = sectionValues;
         break;
-      }
-      case "comments": {
-        this.sectionValues.comments = sectionValues;
       }
     }
   }

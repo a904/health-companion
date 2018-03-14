@@ -1,32 +1,22 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-    <p class="montsserat heading">The direction of my attention and energy is </p>
-
-    <div class="row">
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <span><img style="width: 70%; height: auto;" src="assets/icons/personality/extrovert@2x.png" alt=""></span>
-        <p class="montsserat">Extrovert is focusing on the outside world: other people, events, actions, things</p>
-      </div>
-      <div style="float: right;" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <span><img style="width: 70%; height: auto;" src="assets/icons/personality/introvert@2x.png" alt=""></span>
-        <p class="montsserat">Introvert is focusing on the internal world: thoughts, emotions and experiences</p>
-      </div>
+<p class="montsserat heading">The direction of my attention and energy is </p>
+<div class="container">
+  <label for="extrovert" (click) = "nextClicked('general')">
+    <div [ngClass]="[(general == 'extrovert')?'checked':'unchecked']" class="radio-card smallRadio">
+        <div class="icon">
+            <img src="assets/icons/personality/extrovert@2x.png" alt="">
+        </div>
+        <p class="radioLabel">Extrovert</p>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <input
-      type="range" list="steplist"
-      min="1" max="4" step="1"
-      name="rating"
-      [(ngModel)] = "general">
-        <datalist id="steplist">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-        </datalist>
-    </div>
-  </div>
+  </label>
+  <input id = "extrovert" type="radio" value="extrovert" [(ngModel)] = "general">
 
+  <label for="introvert" (click) = "nextClicked('general')">
+    <div [ngClass]="[(general == 'introvert')?'checked':'unchecked']" class="radio-card smallRadio">
+        <div class="icon">
+            <img src="assets/icons/personality/introvert@2x.png" alt="">
+        </div>
+        <p class="radioLabel">Introvert</p>
+    </div>
+  </label>
+  <input id = "introvert" type="radio" value="introvert" [(ngModel)] = "general">
 </div>
-
-<button class="nextButton" type="button" name="button" (click)="nextClicked('logical')">Next</button>

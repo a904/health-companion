@@ -24,7 +24,7 @@ export class ActivitySection {
     console.log(this.activitySectionValues);
   }
 
-  currentActivityComponent = 'activities';
+  currentActivityComponent = 'weekly-hours';
   onNavigateActivity(nextActivityComponent: string) {
     console.log(this.activitySectionValues.activities);
     this.currentActivityComponent = nextActivityComponent;

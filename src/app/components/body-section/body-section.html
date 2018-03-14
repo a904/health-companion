@@ -34,34 +34,16 @@
 </fat-table>
 
 <fat-male
-(showNextBodyComponent) = "onNavigateBody($event)"
+(showNextSection) = "nextClicked($event)"
 (sendFatValue) = "setFatValue($event)"
 *ngIf = "currentBodyComponent === 'fat-male'">
 </fat-male>
 
 <fat-female
-(showNextBodyComponent) = "onNavigateBody($event)"
+(showNextSection) = "nextClicked($event)"
 (sendFatValue) = "setFatValue($event)"
 *ngIf = "currentBodyComponent === 'fat-female'">
 </fat-female>
-
-<chronic
-(showNextBodyComponent) = "onNavigateBody($event)"
-(sendChronicValue) = "setChronicValue($event)"
-*ngIf = "currentBodyComponent === 'chronic'">
-</chronic>
-
-<allergies
-(showNextBodyComponent) = "onNavigateBody($event)"
-(sendAllergiesValue) = "setAllergiesValue($event)"
-*ngIf = "currentBodyComponent === 'allergies'">
-</allergies>
-
-<pains
-(showNextBodyComponent) = "onNavigateBody($event)"
-(sendPainsValue) = "setPainsValue($event)"
-*ngIf = "currentBodyComponent === 'pains'">
-</pains>
 
 <button
 class="nextButton" type="button" name="button"

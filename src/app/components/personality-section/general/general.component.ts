@@ -9,20 +9,23 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 
 export class GeneralComponent implements OnInit {
 
-  general = 3;
+  general = "";
   constructor() { }
 
   ngOnInit() {
   }
 
-  @Output() sendGeneralValue = new EventEmitter<number>();
+  @Output() sendGeneralValue = new EventEmitter<string>();
 
   @Output() showNextPersonalityComponent = new EventEmitter<string>();
 
   nextClicked(nextPersonalityComponent: string) {
-    this.showNextPersonalityComponent.emit(nextPersonalityComponent);
-    this.sendGeneralValue.emit(this.general);
-    console.log(this.general);
+    setTimeout(()=> {
+      this.showNextPersonalityComponent.emit(nextPersonalityComponent);
+      this.sendGeneralValue.emit(this.general);
+      console.log(this.general);
+    }, 500);
+
   }
 
 }

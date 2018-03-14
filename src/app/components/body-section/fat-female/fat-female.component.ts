@@ -7,14 +7,13 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class FatFemale {
     fatFemale : number;
-
-    @Output() showNextBodyComponent = new EventEmitter<string>();
+    @Output() showNextSection = new EventEmitter<string>();
     @Output() sendFatValue = new EventEmitter<number>();
 
     nextClicked(nextBodyComponent: string) {
       setTimeout(()=>{
-        this.showNextBodyComponent.emit(nextBodyComponent);
         this.sendFatValue.emit(this.fatFemale);
+        this.showNextSection.emit('energy-section');
       }, 500);
 
     }

@@ -37,13 +37,14 @@ export class PersonalitySectionComponent implements OnInit {
   /*To render next sub component*/
   currentPersonalityComponent = 'general';
   onNavigatePersonality(nextPersonalityComponent: string) {
-    this.currentPersonalityComponent = nextPersonalityComponent;
+    this.showNextComponent.emit('finish');
   }
 
   setPersonalityValues(fieldValue, fieldName) {
     switch(fieldName) {
       case 'general' : {
         this.personalityValues.general = fieldValue;
+        this.nextClicked('finish');
         break;
       }
 
@@ -79,7 +80,6 @@ export class PersonalitySectionComponent implements OnInit {
 
       case 'holdingBack' : {
         this.personalityValues.holdingBack = fieldValue;
-        this.nextClicked('finish');
         break;
       }
     }

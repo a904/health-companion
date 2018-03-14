@@ -18,14 +18,7 @@ export class FoodTypeComponent implements OnChanges {
     wateryCarbs: false,
     juicyFruits: false,
     dairyProducts: false,
-    junk: false,
-    otherFoodTypes: []
-  }
-
-  otherFoodType = "";
-  addFoodType() {
-    this.foodTypes.otherFoodTypes.push(this.otherFoodType);
-    this.otherFoodType = "";
+    junk: false
   }
 
   @Output() sendFoodTypesValue = new EventEmitter<{}>();

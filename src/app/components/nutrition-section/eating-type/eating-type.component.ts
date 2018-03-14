@@ -9,24 +9,25 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class EatingType {
 
     eatingPreferences = {
-      type: "",
-      avoidItems: []
+      type: ""
     }
 
-    avoid : string;
-    addAvoidItems() {
-      this.eatingPreferences.avoidItems.push(this.avoid);
-      this.avoid = "";
-    }
+    // avoid : string;
+    // addAvoidItems() {
+    //   this.eatingPreferences.avoidItems.push(this.avoid);
+    //   this.avoid = "";
+    // }
 
     @Output() sendEatingPreferencesValue = new EventEmitter<{}>();
 
     @Output() showNextNutritionComponent = new EventEmitter<string>();
 
     nextClicked(nextNutritionComponent: string) {
-      this.showNextNutritionComponent.emit(nextNutritionComponent);
-      this.sendEatingPreferencesValue.emit(this.eatingPreferences);
-      console.log(this.eatingPreferences);
+      setTimeout(()=> {
+        this.showNextNutritionComponent.emit(nextNutritionComponent);
+        this.sendEatingPreferencesValue.emit(this.eatingPreferences);
+        console.log(this.eatingPreferences);
+      }, 500)
     }
 
 }
