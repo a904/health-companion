@@ -10,7 +10,7 @@ import { ServerService } from './server.service'
 export class AppComponent {
 
   constructor(private serverService: ServerService) { }
-  currentComponent = 'results';
+  currentComponent = 'login-form';
 
   sectionValues = {
     userDetails : {

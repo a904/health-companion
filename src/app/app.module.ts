@@ -76,6 +76,7 @@ import { FinishComponent } from './components/finish/finish.component';
 import { RadioButtonComponent } from './components/radio-button/radio-button.component';
 import { MedicalConditionsComponent } from './components/body-section/medical-conditions/medical-conditions.component';
 import { ResultsComponent } from './components/results/results.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 export const firebaseConfig = {
     apiKey: "AIzaSyBjdV5r2_BFAFmH6s8yX9OmRbRNsvDj7yQ",
@@ -98,7 +99,7 @@ export const firebaseConfig = {
     MindSection, SleepDuration, SevenHours, SleepRating, Stress, StressDuration,
     Meals, Meditate, Travel, FitNarrativeComponent, EatingHabitComponent, FoodTypeComponent, GetStartedComponent, WeeklyHoursComponent,
     PersonalitySectionComponent, GeneralComponent, LogicalComponent, SituationComponent,
-    PlanningComponent, LiveWithComponent, AspirationsComponent, HoldingBackComponent, FinishComponent, RadioButtonComponent, MedicalConditionsComponent, ResultsComponent
+    PlanningComponent, LiveWithComponent, AspirationsComponent, HoldingBackComponent, FinishComponent, RadioButtonComponent, MedicalConditionsComponent, ResultsComponent, StatisticsComponent
   ],
   imports: [
     BrowserModule,

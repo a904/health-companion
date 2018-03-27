@@ -1,5 +1,5 @@
 import {animate, state, style, transition, trigger} from '@angular/animations';
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Output, EventEmitter } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @Component({
@@ -29,7 +29,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 export class ResultsComponent implements OnInit {
   score: number = 100;
   state: string = 'collapsed';
-
+  @Output() showNextComponent = new EventEmitter<string>();
   constructor() {
   }
 
@@ -37,6 +37,10 @@ export class ResultsComponent implements OnInit {
     setTimeout(()=> {
       this.state = 'expanded';
     }, 500)
+  }
+
+  nextClicked(nextComponent: string) {
+    this.showNextComponent.emit(nextComponent);
   }
 
 }
