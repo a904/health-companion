@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ServerService } from './server.service'
 import { HttpModule } from '@angular/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 import { AppComponent } from './app.component';
 import { LoginForm } from './components/login-form/login-form.component';
@@ -101,7 +103,8 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserAnimationsModule
   ],
   providers: [ServerService],
   bootstrap: [AppComponent]

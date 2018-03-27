@@ -1,5 +1,5 @@
 <div id="toggle-test" class="form-container">
-
+  
       <login-form *ngIf="currentComponent === 'login-form'"
       (sendUserDetails) = "setSectionValues($event, 'user')"
       (showNextComponent) = "onNavigate($event)">
@@ -49,6 +49,10 @@
 
       <app-finish
       (showNextComponent)="onNavigate($event)"
-      *ngIf="currentComponent === 'results'">
+      *ngIf="currentComponent === 'finish'">
       </app-finish>
+
+      <app-results
+      *ngIf="currentComponent === 'results'">
+      </app-results>
 </div>

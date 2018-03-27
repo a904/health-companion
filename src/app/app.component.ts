@@ -10,7 +10,8 @@ import { ServerService } from './server.service'
 export class AppComponent {
 
   constructor(private serverService: ServerService) { }
-  currentComponent = 'personality-section';
+  currentComponent = 'results';
+
   sectionValues = {
     userDetails : {
       firstName: "",
@@ -85,4 +86,5 @@ export class AppComponent {
       }
     }
   }
+
 }
