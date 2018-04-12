@@ -1,66 +1,10 @@
-import { Component, OnInit, NgModule, Output, Input, EventEmitter } from '@angular/core';
-// import { ScoreService } from './score.service';
+import { Injectable, ViewChild } from '@angular/core';
 
-@Component({
-  selector: 'app-results',
-  templateUrl: './results.component.html'
-})
+@Injectable()
 
-export class ResultsComponent implements OnInit {
-  score: number = 0;
-  scoreCounter = null;
-  @Output() showNextComponent = new EventEmitter<string>();
+export class ScoreService {
 
-  constructor() {
-  }
-
-  ngOnInit() {
-    let calculatedScore = this.calculateScore(this.userDetails);
-
-    this.scoreCounter = setInterval(()=> {
-      if(this.score < calculatedScore && this.score < 99) this.score++;
-      else this.clearCounter();
-    }, 15);
-  }
-
-  clearCounter() {
-    clearInterval(this.scoreCounter);
-  }
-
-  nextClicked(nextComponent: string) {
-    this.showNextComponent.emit(nextComponent);
-  }
-
-  @Input() userDetails: {
-    mindValues: {
-      sleepRating: number,
-      sleepDetails: {duration: string},
-      stressDetails: {doesFeelStressed: string},
-      meditates: {value: string}
-    },
-    bodyValues: {},
-    energyValues: {
-      active: string
-    },
-    nutritionValues: {
-      drinking: {does: string, frequency: string},
-      smoking: {does: string, frequency: string},
-      foodType: {
-        colourfulVeggies: boolean,
-        dairyProducts: boolean,
-        juicyFruits: boolean,
-        junk: boolean,
-        leanProteins: boolean,
-        naturalFats: boolean,
-        wateryCarbs: boolean
-      },
-      junkFood: string,
-      thoughts: string
-    },
-    activityValues: {
-      weeklyHours: number
-    }
-  };
+  constructor() { }
 
   calculateScore(userDetails: {
     mindValues: {
@@ -220,5 +164,4 @@ export class ResultsComponent implements OnInit {
 
     return score;
   }
-
 }

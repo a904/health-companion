@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ServerService } from './server.service'
+import { ServerService } from './server.service';
 
 @Component({
   selector: 'form-body',
@@ -22,9 +22,11 @@ export class AppComponent {
     energyValues: {},
     nutritionValues: {},
     mindValues: {},
-    activityValues: {},
-    personalityValues: {},
-    comments: ""
+    activityValues: {}
+    // ,
+    // personalityValues: {}
+    // ,
+    // comments: ""
   };
   url:string = "";
 
@@ -80,10 +82,10 @@ export class AppComponent {
         this.sectionValues.activityValues = sectionValues;
         break;
       }
-      case "personality": {
-        this.sectionValues.personalityValues = sectionValues;
-        break;
-      }
+      // case "personality": {
+      //   this.sectionValues.personalityValues = sectionValues;
+      //   break;
+      // }
     }
   }
 

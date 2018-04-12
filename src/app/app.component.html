@@ -54,7 +54,8 @@
 
       <app-results
       (showNextComponent)="onNavigate($event)"
-      *ngIf="currentComponent === 'results'">
+      *ngIf="currentComponent === 'results'"
+      [userDetails] = sectionValues>
       </app-results>
 
       <app-statistics

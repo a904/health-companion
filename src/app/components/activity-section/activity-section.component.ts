@@ -9,9 +9,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class ActivitySection {
 
   activitySectionValues = {
-    activities: {},
+    // activities: {},
     weeklyHours: 0,
-    getStarted: {},
+    // getStarted: {},
   };
 
   @Output() activityValuesEmit = new EventEmitter<{}>();
@@ -26,26 +26,25 @@ export class ActivitySection {
 
   currentActivityComponent = 'weekly-hours';
   onNavigateActivity(nextActivityComponent: string) {
-    console.log(this.activitySectionValues.activities);
     this.currentActivityComponent = nextActivityComponent;
   }
 
   setActivitiesValue(fieldValue, fieldName) {
     switch(fieldName) {
-      case 'activities' : {
-        this.activitySectionValues.activities = fieldValue;
-        break;
-      }
+      // case 'activities' : {
+      //   this.activitySectionValues.activities = fieldValue;
+      //   break;
+      // }
 
       case 'weeklyHours' : {
         this.activitySectionValues.weeklyHours = fieldValue;
         break;
       }
-
-      case 'getStarted' : {
-        this.activitySectionValues.getStarted = fieldValue;
-        break;
-      }
+      //
+      // case 'getStarted' : {
+      //   this.activitySectionValues.getStarted = fieldValue;
+      //   break;
+      // }
     }
   }
 }

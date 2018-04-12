@@ -7,12 +7,12 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 
 export class SleepRating {
-    sleepRating : 1;
+    sleepRating : number = 6;
 
     @Output() sendSleepRatingValue = new EventEmitter<number>();
 
     @Output() showNextMindComponent = new EventEmitter<string>();
-    
+
     nextClicked(nextMindComponent: string) {
       this.showNextMindComponent.emit(nextMindComponent);
       this.sendSleepRatingValue.emit(this.sleepRating);

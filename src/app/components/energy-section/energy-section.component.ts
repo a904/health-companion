@@ -50,10 +50,11 @@ export class EnergySection {
     dob: "",
     height: 0,
     weight: 0,
-    fat: 0,
-    chronic: [""],
-    allergies: [""],
-    pains: [""]
+    fat: 0
+    // ,
+    // chronic: [""],
+    // allergies: [""],
+    // pains: [""]
   };
 
   currentYear = 2017;

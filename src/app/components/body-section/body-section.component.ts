@@ -15,10 +15,11 @@ export class BodySection {
     dob: "",
     height: 0,
     weight: 0,
-    fat: 0,
-    chronic: [""],
-    allergies: [""],
-    pains: [""]
+    fat: 0
+    // ,
+    // chronic: [""],
+    // allergies: [""],
+    // pains: [""]
   };
 
   ngOnInit() {
@@ -61,16 +62,16 @@ export class BodySection {
   setFatValue(fat: number) {
     this.bodyValues.fat = fat;
   }
-
-  setChronicValue(chronic: string[]) {
-    this.bodyValues.chronic = chronic;
-  }
-
-  setAllergiesValue(allergies: string[]) {
-    this.bodyValues.allergies = allergies;
-  }
-
-  setPainsValue(pains: string[]) {
-    this.bodyValues.pains = pains;
-  }
+  //
+  // setChronicValue(chronic: string[]) {
+  //   this.bodyValues.chronic = chronic;
+  // }
+  //
+  // setAllergiesValue(allergies: string[]) {
+  //   this.bodyValues.allergies = allergies;
+  // }
+  //
+  // setPainsValue(pains: string[]) {
+  //   this.bodyValues.pains = pains;
+  // }
 }
