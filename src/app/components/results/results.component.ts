@@ -1,5 +1,4 @@
 import { Component, OnInit, NgModule, Output, Input, EventEmitter } from '@angular/core';
-// import { ScoreService } from './score.service';
 
 @Component({
   selector: 'app-results',
@@ -10,6 +9,9 @@ export class ResultsComponent implements OnInit {
   score: number = 0;
   scoreCounter = null;
   @Output() showNextComponent = new EventEmitter<string>();
+  @Output() suggestions = {
+    
+  };
 
   constructor() {
   }

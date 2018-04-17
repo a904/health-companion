@@ -1,0 +1,95 @@
+.label-image-div {
+  padding: 0;
+  margin-left: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+  .label-image {
+    height: 100vh;
+    height: auto;
+    transform: scale(2);
+    filter: blur(2px) grayscale(100%);
+  }
+.user-details {
+  padding: 0;
+  margin-left: 0;
+  height: 100vh;
+  background-color: #40a2e6;
+  color: #fff;
+}
+  .fitness-label {
+    font-size: 35px;
+    margin-top: 30vh;
+  }
+  .user-name {
+    font-size: 65px;
+  }
+
+.percentile-container {
+  height: 50vh;
+}
+  .percentile {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+    .percentile-background {
+      filter: blur(5px);
+      transform: scale(2.5);
+      position: absolute;
+      z-index: 1;
+    }
+    .percentile-score {
+      color: white;
+      font-size: 13em;
+      position: absolute;
+      z-index: 2;
+      left: 40px;
+      top: 90px;
+    }
+    .percentile-comment {
+      color: white;
+      font-size: 2em;
+      position: absolute;
+      z-index: 2;
+      left: 40px;
+      bottom: 50px;
+    }
+  .section {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: justify;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-top: 3em;
+  }
+    .section-heading {
+      font-size: 5em;
+      font-weight: bold;
+    }
+    .section-facts {
+      font-size: 1.7em;
+    }
+
+
+.comments-container {
+  height: 50vh;
+  background-color: #40a2e6;
+  color: white;
+  text-align: left;
+  padding-left: 4em;
+  padding-top: 4em;
+  padding-right: 4em;
+}
+  .comments {
+    color: white;
+  }
+  .comments-heading {
+    font-size: 3em;
+  }
+    .comments ul {
+      font-size: 1.7em;
+    }
