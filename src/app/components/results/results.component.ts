@@ -113,11 +113,6 @@ export class ResultsComponent implements OnInit {
     return totalScore;
   }
 
-  // calculateBodyScore(bodyDetails) {
-  //
-  // }
-  //
-
   calculateActivityScore(activityDetails: {weeklyHours: number}) {
     let score = 0;
 
@@ -154,9 +149,18 @@ export class ResultsComponent implements OnInit {
 
   calculateEnergyScore(energyDetails: {active: string}) {
     let score = 0;
-    if(energyDetails.active === '3') score += 15;
-    if(energyDetails.active === '2') score += 12;
-    if(energyDetails.active === '1') score += 8;
+    if(energyDetails.active === '3') {
+      score += 15;
+      this.suggestions.activity.push('You have an active lifestyle. Although it is very healthy and has great dividends, it needs to be balanced with good sleep. Make sure that you get 7 to 9 hours of sleep on a daily basis.');
+    }
+    if(energyDetails.active === '2') {
+      score += 12;
+      this.suggestions.activity.push('You have an active lifestyle. Although it is very healthy and has great dividends, it needs to be balanced with good sleep. Make sure that you get 7 to 9 hours of sleep on a daily basis.');
+    }
+    if(energyDetails.active === '1') {
+      score += 8;
+      this.suggestions.activity.push('Since you have a sedentry routine, you need to invest time in fitness activity of get your body the right amount of work. It will benefit you on physical as well as mental level.');
+    }
 
     return score;
   }
@@ -246,7 +250,7 @@ export class ResultsComponent implements OnInit {
 
     if(mindDetails.sleepDetails.duration === 'Less than 7 hours') {
       score += 7;
-      this.suggestions.mind.push('Try to get 7 to 9 hours of sleep daily. Sleep helps recover your mind and body keeps your stress levels in check.');
+      this.suggestions.mind.push('Lack of adequate sleep will cause you to feel drowsy, irritable or sometimes depressed. You will struggle to take new information at work, remembering things or making decisions. It will lead you to crave more unhealthy foods, which could cause weight gain.');
     }
 
     if(mindDetails.stressDetails.doesFeelStressed === 'No stress' ||
@@ -263,6 +267,8 @@ export class ResultsComponent implements OnInit {
     if(mindDetails.meditates.value === 'true') {
       score += 3;
       this.suggestions.mind.push('Very few people practise meditation. Keep it up as it genuinely increases the standards of your life.');
+    } else {
+      this.suggestions.mind.push('Meditation can help us to eliminate negative thoughts, worries, anxiety, all factors that can prevent us feeling happy. It has been proved that the practice of meditation, carried out on a regular basis, will mitigate the symptoms of stress and anxiety.');
     }
 
     return score;
