@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./statistics.component.css']
 })
 export class StatisticsComponent implements OnInit {
-
+  @Input() user: {};
   @Input() displaySuggestions: {
     nutrition: string[],
     activity: string[],
@@ -16,7 +16,7 @@ export class StatisticsComponent implements OnInit {
     mind: [],
     activity: []
   }
-  
+
   constructor() { }
 
   ngOnInit() {
