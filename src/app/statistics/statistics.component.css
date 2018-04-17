@@ -47,31 +47,30 @@
       position: absolute;
       z-index: 2;
       left: 40px;
-      top: 90px;
+      top: 10px;
     }
     .percentile-comment {
       color: white;
-      font-size: 2em;
+      font-size: 1.5em;
       position: absolute;
       z-index: 2;
       left: 40px;
-      bottom: 50px;
+      bottom: 20px;
     }
   .section {
     margin: 0;
-    padding: 0;
     height: 100%;
     text-align: justify;
     padding-left: 4em;
     padding-right: 4em;
-    padding-top: 3em;
+    padding-top: 1.5em;
   }
     .section-heading {
       font-size: 5em;
       font-weight: bold;
     }
     .section-facts {
-      font-size: 1.7em;
+      font-size: 1.5em;
     }
 
 
@@ -81,7 +80,7 @@
   color: white;
   text-align: left;
   padding-left: 4em;
-  padding-top: 4em;
+  padding-top: 1.5em;
   padding-right: 4em;
 }
   .comments {
@@ -91,5 +90,5 @@
     font-size: 3em;
   }
     .comments ul {
-      font-size: 1.7em;
+      font-size: 1.5em;
     }

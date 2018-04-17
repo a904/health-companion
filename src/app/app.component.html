@@ -55,10 +55,12 @@
       <app-results
       (showNextComponent)="onNavigate($event)"
       *ngIf="currentComponent === 'results'"
-      [userDetails] = sectionValues>
+      [userDetails] = sectionValues
+      (sendSuggestions) = "setSuggestionsValue($event)">
       </app-results>
 
       <app-statistics
-      *ngIf="currentComponent === 'statistics'">
+      *ngIf="currentComponent === 'statistics'"
+      [displaySuggestions]="suggestions">
       </app-statistics>
 </div>

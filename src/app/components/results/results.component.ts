@@ -9,9 +9,16 @@ export class ResultsComponent implements OnInit {
   score: number = 0;
   scoreCounter = null;
   @Output() showNextComponent = new EventEmitter<string>();
-  @Output() suggestions = {
-    
-  };
+  @Output() sendSuggestions = new EventEmitter<{}>();
+  suggestions : {
+    nutrition: string[],
+    activity: string[],
+    mind: string[]
+  } = {
+    nutrition: [],
+    mind: [],
+    activity: []
+  }
 
   constructor() {
   }
@@ -25,12 +32,15 @@ export class ResultsComponent implements OnInit {
     }, 15);
   }
 
+
   clearCounter() {
     clearInterval(this.scoreCounter);
   }
 
   nextClicked(nextComponent: string) {
     this.showNextComponent.emit(nextComponent);
+    this.sendSuggestions.emit(this.suggestions);
+    console.log(this.suggestions);
   }
 
   @Input() userDetails: {
@@ -111,19 +121,33 @@ export class ResultsComponent implements OnInit {
   calculateActivityScore(activityDetails: {weeklyHours: number}) {
     let score = 0;
 
-    if(activityDetails.weeklyHours >  9)
-       score += 15;
+    if(activityDetails.weeklyHours >  9) {
+      score += 15;
+      this.suggestions.activity.push('Your physical activity output is excellent. Keep it up. Get involved in different activities running, dancing, yoga, sports.');
+    }
 
     if(activityDetails.weeklyHours >  7 &&
-       activityDetails.weeklyHours <= 9) score += 13;
+       activityDetails.weeklyHours <= 9) {
+      score += 13;
+      this.suggestions.activity.push('You can invest few hours extra per week into simple activities like walking, yoga.');
+    }
 
     if(activityDetails.weeklyHours >  5 &&
-       activityDetails.weeklyHours <= 7) score += 10;
+       activityDetails.weeklyHours <= 7) {
+      score += 10;
+      this.suggestions.activity.push('You need to invest few hours daily into activities like running sports. Sports not only make you fit but also detoxify your body. Pick up one or two activities like running, dancing or any sports.');
+    }
 
     if(activityDetails.weeklyHours >  2 &&
-       activityDetails.weeklyHours <= 5) score += 7;
+       activityDetails.weeklyHours <= 5) {
+      score += 7;
+      this.suggestions.activity.push('You need to invest few hours daily into activities like running sports. Sports not only make you fit but also detoxify your body. Pick up one or two activities like running, dancing or any sports');
+    }
 
-    if(activityDetails.weeklyHours <= 2) score += 4;
+    if(activityDetails.weeklyHours <= 2){
+      score += 4;
+      this.suggestions.activity.push('You need to invest few hours daily into activities like running sports.');
+    }
 
     return score;
   }
@@ -210,15 +234,36 @@ export class ResultsComponent implements OnInit {
   }) {
     let score = 0;
     score += mindDetails.sleepRating;
-    if(mindDetails.sleepDetails.duration ===  'More than 9 hours') score += 8;
-    if(mindDetails.sleepDetails.duration === '7-9 hours') score += 10;
-    if(mindDetails.sleepDetails.duration === 'Less than 7 hours') score += 7;
+    if(mindDetails.sleepDetails.duration ===  'More than 9 hours') {
+      score += 8;
+      this.suggestions.mind.push('You should cut-down few hours from your daily sleep. Oversleeping will make you lethargic and reduce your efficiency.');
+    }
+
+    if(mindDetails.sleepDetails.duration === '7-9 hours') {
+      score += 10;
+      this.suggestions.mind.push('Maintain your daily sleep duration. Sleep early and wake-up early to get more done and accomplish your targets.');
+    }
+
+    if(mindDetails.sleepDetails.duration === 'Less than 7 hours') {
+      score += 7;
+      this.suggestions.mind.push('Try to get 7 to 9 hours of sleep daily. Sleep helps recover your mind and body keeps your stress levels in check.');
+    }
 
     if(mindDetails.stressDetails.doesFeelStressed === 'No stress' ||
-       mindDetails.stressDetails.doesFeelStressed === 'Not really') score += 10;
-    if(mindDetails.stressDetails.doesFeelStressed === 'Generally stressed') score += 6;
+       mindDetails.stressDetails.doesFeelStressed === 'Not really') {
+      score += 10;
+      this.suggestions.mind.push('We are glad that your life is stress-free. Stay that way and enjoy your life to the fullest.');
+    }
 
-    if(mindDetails.meditates.value === 'true') score += 3;
+    if(mindDetails.stressDetails.doesFeelStressed === 'Generally stressed') {
+      score += 6;
+      this.suggestions.mind.push('It is important to manage stress. Identify the sources of stress in your life. Learn to say no. Avoid people that stress you out. Take control of your environment. And most importantly, share your feelings.');
+    }
+
+    if(mindDetails.meditates.value === 'true') {
+      score += 3;
+      this.suggestions.mind.push('Very few people practise meditation. Keep it up as it genuinely increases the standards of your life.');
+    }
 
     return score;
   }

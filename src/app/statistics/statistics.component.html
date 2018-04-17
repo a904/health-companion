@@ -32,9 +32,9 @@
     <p class="montsserat comments-heading">Personal suggestions</p>
     <div class="comments">
       <ul>
-        <li>This is a suggestion</li>
-        <li>This is another suggestion</li>
-        <li>This is yet another suggestion</li>
+        <li *ngFor="let suggestion of displaySuggestions.nutrition">
+          {{suggestion}}
+        </li>
       </ul>
     </div>
   </div>
@@ -60,9 +60,9 @@
     <p class="montsserat comments-heading">Personal suggestions</p>
     <div class="comments">
       <ul>
-        <li>This is a suggestion</li>
-        <li>This is another suggestion</li>
-        <li>This is yet another suggestion</li>
+        <li *ngFor="let suggestion of displaySuggestions.activity">
+          {{suggestion}}
+        </li>
       </ul>
     </div>
   </div>
@@ -87,9 +87,9 @@
     <p class="montsserat comments-heading">Personal suggestions</p>
     <div class="comments">
       <ul>
-        <li>This is a suggestion</li>
-        <li>This is another suggestion</li>
-        <li>This is yet another suggestion</li>
+        <li *ngFor="let suggestion of displaySuggestions.mind">
+          {{suggestion}}
+        </li>
       </ul>
     </div>
   </div>

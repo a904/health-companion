@@ -30,6 +30,16 @@ export class AppComponent {
   };
   url:string = "";
 
+  suggestions : {
+    nutrition: string[],
+    activity: string[],
+    mind: string[]
+  } = {
+    nutrition: [],
+    mind: [],
+    activity: []
+  }
+
   onNext() {
     var tempUsername = this.sectionValues.userDetails.email;
     var username = "";
@@ -87,6 +97,11 @@ export class AppComponent {
       //   break;
       // }
     }
+  }
+
+  setSuggestionsValue(sentSuggestions: any) {
+    this.suggestions = sentSuggestions;
+    console.log(this.suggestions);
   }
 
 }
